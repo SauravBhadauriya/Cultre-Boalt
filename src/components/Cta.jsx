@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Mail, ArrowRight } from "lucide-react"
 import ContactModal from './ContactModal'
 
-export default function CTASection() {
+export default function CTASection({ onNavigate }) {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
@@ -28,14 +28,15 @@ export default function CTASection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               onClick={() => setIsModalOpen(true)}
-              className="bg-white text-blue-600 hover:bg-blue-50 hover:scale-105 transition-all duration-300 font-bold text-base md:text-lg px-6 md:px-8 py-6 rounded-full w-full sm:w-auto"
+              className="bg-white text-blue-600 hover:bg-blue-50 hover:scale-105 transition-all duration-300 font-bold text-base md:text-lg px-6 md:px-8 py-6 rounded-full w-full sm:w-auto cursor-pointer"
             >
               <Mail className="mr-2 h-5 w-5" />
               Contact Us
             </Button>
             
             <Button 
-              className="border-2 border-white text-white hover:bg-white/10 font-bold text-base md:text-lg px-6 md:px-8 py-6 rounded-full w-full sm:w-auto bg-transparent"
+              onClick={() => onNavigate && onNavigate('design')}
+              className="border-2 border-white text-white hover:bg-white/10 font-bold text-base md:text-lg px-6 md:px-8 py-6 rounded-full w-full sm:w-auto bg-transparent cursor-pointer"
             >
               <ArrowRight className="mr-2 h-5 w-5" />
               View Services

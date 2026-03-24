@@ -8,7 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
-export default function HeroBanner() {
+export default function HeroBanner({ onNavigate }) {
   const images = [
     "/src/assets/images/Hero/hero1.jpg",
     "/src/assets/images/Hero/hero2.jpg",
@@ -48,11 +48,17 @@ export default function HeroBanner() {
                   </p>
 
                   <div className="mt-6 flex flex-col sm:flex-row gap-4">
-                    <button className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    <button 
+                      onClick={() => onNavigate('contact')}
+                      className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors cursor-pointer"
+                    >
                       Get Started
                     </button>
 
-                    <button className="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                    <button 
+                      onClick={() => onNavigate('design')}
+                      className="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors cursor-pointer"
+                    >
                       View Work
                     </button>
                   </div>

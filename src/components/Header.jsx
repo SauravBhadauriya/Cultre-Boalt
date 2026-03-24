@@ -11,6 +11,7 @@ export default function Header({ onNavigate }) {
     { name: "Why Us", link: "#why-us", action: () => onNavigate('why-us') },
     { name: "Social", link: "#social", action: () => onNavigate('social') },
     { name: "About", link: "#about", action: () => onNavigate('about') },
+    { name: "Career", link: "#career", action: () => onNavigate('career') },
     { name: "Contact", link: "#contact", action: () => onNavigate('contact') }
   ]
 
@@ -31,9 +32,14 @@ export default function Header({ onNavigate }) {
               onNavigate('home')
               setIsOpen(false)
             }}
-            className="text-xl md:text-2xl font-bold text-slate-900 hover:text-blue-600 transition-colors"
+            className="flex flex-col items-start cursor-pointer group"
           >
-            Cultre Boat
+            <span className="text-xl md:text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+              Cultre Boat
+            </span>
+            <span className="text-xs md:text-sm text-slate-600 group-hover:text-blue-600 transition-colors font-medium">
+              Connect . Create . Captivate
+            </span>
           </button>
         </div>
 
@@ -43,18 +49,25 @@ export default function Header({ onNavigate }) {
             <li key={index}>
               <button 
                 onClick={() => handleMenuClick(item)}
-                className="text-slate-700 hover:text-slate-900 transition-colors font-medium"
+                className="text-slate-700 hover:text-slate-900 transition-colors font-medium cursor-pointer"
               >
                 {item.name}
               </button>
             </li>
           ))}
-          <Button className="bg-blue-600 hover:bg-blue-700">Get Started</Button>
+          <Button 
+            onClick={() => {
+              handleMenuClick({ action: () => onNavigate('contact') })
+            }}
+            className="bg-blue-600 hover:bg-blue-700 cursor-pointer"
+          >
+            Get Started
+          </Button>
         </ul>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2"
+          className="md:hidden p-2 cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -74,13 +87,18 @@ export default function Header({ onNavigate }) {
               <li key={index}>
                 <button 
                   onClick={() => handleMenuClick(item)}
-                  className="text-slate-700 hover:text-slate-900 transition-colors font-medium block w-full text-left"
+                  className="text-slate-700 hover:text-slate-900 transition-colors font-medium block w-full text-left cursor-pointer"
                 >
                   {item.name}
                 </button>
               </li>
             ))}
-            <Button className="w-full bg-blue-600 hover:bg-blue-700">
+            <Button 
+              onClick={() => {
+                handleMenuClick({ action: () => onNavigate('contact') })
+              }}
+              className="w-full bg-blue-600 hover:bg-blue-700 cursor-pointer"
+            >
               Get Started
             </Button>
           </ul>

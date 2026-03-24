@@ -11,14 +11,16 @@ import Design from './pages/Design'
 import PR from './pages/PR'
 import About from './pages/About'
 import Social from './pages/Social'
+import Career from './pages/Career'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 
-function HomePage() {
+function HomePage({ onNavigate }) {
   return (
     <>
-      <HeroBanner />
+      <HeroBanner onNavigate={onNavigate} />
       <Brands />
       <WhatWeDo />
-      <CTASection />
+      <CTASection onNavigate={onNavigate} />
     </>
   )
 }
@@ -55,15 +57,17 @@ function App() {
     <div className="min-h-screen bg-white flex flex-col">
       <Header onNavigate={handleNavigate} />
       <main className="flex-grow">
-        {currentPage === 'home' && <HomePage />}
+        {currentPage === 'home' && <HomePage onNavigate={handleNavigate} />}
         {currentPage === 'contact' && <Contact onBack={handleBack} />}
         {currentPage === 'design' && <Design onBack={handleBack} />}
         {currentPage === 'PR' && <PR onBack={handleBack} />}
         {currentPage === 'about' && <About onBack={handleBack} />}
         {currentPage === 'why-us' && <WhyChooseUs onBack={handleBack} />}
         {currentPage === 'social' && <Social onBack={handleBack} />}
+        {currentPage === 'career' && <Career onBack={handleBack} />}
+        {currentPage === 'privacy-policy' && <PrivacyPolicy onBack={handleBack} />}
       </main>
-      <Footer />
+      <Footer onNavigate={handleNavigate} />
     </div>
   )
 }

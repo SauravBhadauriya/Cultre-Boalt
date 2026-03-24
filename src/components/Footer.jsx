@@ -1,32 +1,33 @@
 import React from 'react'
 import { Share2, Heart, Zap, Mail, Phone, MapPin } from 'lucide-react'
 
-export default function Footer() {
+export default function Footer({ onNavigate }) {
   const currentYear = new Date().getFullYear()
 
   const footerData = [
     {
       title: "Services",
       links: [
-        { name: "Brand Design", link: "#services" },
-        { name: "PR & Communications", link: "#services" },
-        { name: "Social Media", link: "#services" }
+        { name: "Brand Design", link: "#design", action: () => onNavigate('design') },
+        { name: "PR & Communications", link: "#pr", action: () => onNavigate('PR') },
+        { name: "Social Media", link: "#social", action: () => onNavigate('social') }
       ]
     },
     {
       title: "Company",
       links: [
-        { name: "About Us", link: "#why-choose" },
-        { name: "Contact", link: "#contact" },
-        { name: "Privacy Policy", link: "#" }
+        { name: "About Us", link: "#about", action: () => onNavigate('about') },
+        { name: "Contact", link: "#contact", action: () => onNavigate('contact') },
+        { name: "Privacy Policy", link: "#privacy-policy", action: () => onNavigate('privacy-policy') },
+        { name: "Career", link: "#career", action: () => onNavigate('career')}
       ]
     },
     {
       title: "Connect",
       links: [
-        { name: "Facebook", link: "#" },
-        { name: "Instagram", link: "#" },
-        { name: "LinkedIn", link: "#" }
+        { name: "Facebook", link: "#", action: null },
+        { name: "Instagram", link: "#", action: null },
+        { name: "LinkedIn", link: "#", action: null }
       ]
     }
   ]
@@ -54,13 +55,13 @@ export default function Footer() {
               <div className="mt-6 space-y-3">
                 <div className="flex items-center gap-2 text-slate-400 text-sm">
                   <Mail className="w-4 h-4" />
-                  <a href="mailto:hello@cultreboat.in" className="hover:text-white transition-colors">
+                  <a href="mailto:hello@cultreboat.in" className="hover:text-white transition-colors cursor-pointer">
                     hello@cultreboat.in
                   </a>
                 </div>
                 <div className="flex items-center gap-2 text-slate-400 text-sm">
                   <Phone className="w-4 h-4" />
-                  <a href="tel:+1234567890" className="hover:text-white transition-colors">
+                  <a href="tel:+1234567890" className="hover:text-white transition-colors cursor-pointer">
                     +1 (234) 567-890
                   </a>
                 </div>
@@ -76,12 +77,12 @@ export default function Footer() {
                 <ul className="space-y-2">
                   {section.links.map((item, i) => (
                     <li key={i}>
-                      <a 
-                        href={item.link}
-                        className="text-slate-400 hover:text-white transition-colors text-sm md:text-base"
+                      <button 
+                        onClick={() => item.action && item.action()}
+                        className="text-slate-400 hover:text-white transition-colors text-sm md:text-base cursor-pointer text-left"
                       >
                         {item.name}
-                      </a>
+                      </button>
                     </li>
                   ))}
                 </ul>
@@ -107,7 +108,7 @@ export default function Footer() {
                   <a 
                     href={social.link}
                     aria-label={social.label}
-                    className="p-2 bg-slate-800 hover:bg-blue-600 rounded-full transition-colors"
+                    className="p-2 bg-slate-800 hover:bg-blue-600 rounded-full transition-colors cursor-pointer"
                   >
                     <IconComponent className="w-5 h-5" />
                   </a>
