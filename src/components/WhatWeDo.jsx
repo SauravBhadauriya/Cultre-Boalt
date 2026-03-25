@@ -22,15 +22,16 @@ export default function WhatWeDo() {
   ]
 
   return (
-    <section id="services" className="py-12 md:py-16 lg:py-20 px-4">
-      <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
+    <section id="services" className="py-16 md:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
+        {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-slate-900">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-slate-900">
             What We Do
           </h2>
-          <p className="text-slate-600 text-base md:text-lg max-w-2xl mx-auto">
-            We specialize in comprehensive brand solutions that combine strategy, creativity, and digital expertise.
+          <p className="text-slate-500 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
+            We specialize in comprehensive brand solutions that combine strategy, creativity,
+            and digital expertise.
           </p>
         </div>
 
@@ -39,8 +40,8 @@ export default function WhatWeDo() {
           {services.map((service, index) => {
             const IconComponent = service.icon
             return (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className="hover:shadow-lg transition-all duration-300 hover:border-blue-200 border-slate-200"
               >
                 <CardHeader>

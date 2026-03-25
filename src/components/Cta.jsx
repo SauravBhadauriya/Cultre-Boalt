@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Mail, ArrowRight } from "lucide-react"
 import ContactModal from './ContactModal'
@@ -10,9 +10,9 @@ export default function CTASection({ onNavigate }) {
     <>
       <section 
         id="contact" 
-        className="py-12 md:py-16 lg:py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white"
+        className="py-12 md:py-16 lg:py-20 bg-teal-700 text-white"
       >
-        <div className="container mx-auto px-4 text-center max-w-4xl">
+        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48 text-center">
           {/* Heading */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 tracking-tight">
             Ready to Transform Your Brand?

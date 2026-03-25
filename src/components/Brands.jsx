@@ -1,4 +1,4 @@
-import React from 'react'
+import { useRef } from 'react'
 import Autoplay from "embla-carousel-autoplay"
 import {
   Carousel,
@@ -7,51 +7,45 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { brandPartners } from '@/data/brandData'
 
 export default function Brands() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: false })
+  const plugin = useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: true })
   )
 
-  const images = [
-    "/src/assets/images/Brandlogo/brand-logo1.avif",
-    "/src/assets/images/Brandlogo/brand-logo2.avif",
-    "/src/assets/images/Brandlogo/brand-logo3.png",
-    "/src/assets/images/Brandlogo/brand-logo4.jpg",
-    "/src/assets/images/Brandlogo/brand-logo5.jpg",
-  ]
-
   return (
-    <section className="w-full py-12 md:py-16 lg:py-20 px-4 bg-slate-50">
-      <div className="max-w-6xl mx-auto">
-        <h3 className="text-2xl md:text-3xl font-semibold text-center mb-8 md:mb-12 text-slate-900">
-          Our Brand Partners
-        </h3>
-        
+    <section className="py-16 md:py-24 bg-white">
+      {/* Brand Partners Section */}
+      <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
+        <div className="text-center mb-12">
+          <p className="text-blue-500 font-bold text-sm uppercase tracking-widest mb-3">Our Partners</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Trusted by Leading Brands</h2>
+        </div>
+
+        {/* Brand Partners Carousel */}
         <Carousel
           plugins={[plugin.current]}
           className="w-full"
-          onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.reset}
           opts={{
             align: "start",
             loop: true,
           }}
         >
           <CarouselContent className="-ml-2 md:-ml-4">
-            {images.map((img, index) => (
+            {brandPartners.map((partner, index) => (
               <CarouselItem 
-                key={index} 
-                className="pl-2 md:pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5"
+                key={index}
+                className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
               >
-                <div className="p-1">
-                  <div className="flex aspect-video items-center justify-center p-4 md:p-6 border border-slate-200 rounded-xl bg-white hover:shadow-md transition-shadow">
-                    <img
-                      src={img}
-                      alt={`brandlogo-${index}`}
-                      className="max-h-full max-w-full object-contain mix-blend-multiply"
-                    />
-                  </div>
+                <div className="flex flex-col items-center justify-center p-6 border border-slate-200 rounded-xl bg-white hover:shadow-lg hover:border-blue-300 transition-all duration-300 cursor-pointer group h-full">
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="h-16 md:h-20 object-contain mb-4 group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <p className="text-xs md:text-sm font-semibold text-slate-900 text-center mb-2">{partner.name}</p>
+                  <p className="text-xs text-blue-600 font-medium text-center">{partner.tagline}</p>
                 </div>
               </CarouselItem>
             ))}

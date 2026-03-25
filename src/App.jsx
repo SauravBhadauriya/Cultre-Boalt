@@ -6,6 +6,10 @@ import Brands from './components/Brands'
 import WhatWeDo from './components/WhatWeDo'
 import WhyChooseUs from './components/WhyChooseUs'
 import CTASection from './components/Cta'
+import AboutUsSection from './components/AboutUsSection'
+import BusinessVerticals from './components/BusinessVerticals'
+import NewsEvents from './components/NewsEvents'
+import ResourcesNewsletter from './components/ResourcesNewsletter'
 import Contact from './pages/Contact'
 import Design from './pages/Design'
 import PR from './pages/PR'
@@ -14,12 +18,21 @@ import Social from './pages/Social'
 import Career from './pages/Career'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 
+import ProminentCustomers from './components/ProminentCustomers'
+import Testimonials from './components/Testimonials'
+
 function HomePage({ onNavigate }) {
   return (
     <>
       <HeroBanner onNavigate={onNavigate} />
       <Brands />
+      <AboutUsSection />
+      <BusinessVerticals />
       <WhatWeDo />
+      <NewsEvents />
+      <ResourcesNewsletter />
+      <ProminentCustomers />
+      <Testimonials />
       <CTASection onNavigate={onNavigate} />
     </>
   )

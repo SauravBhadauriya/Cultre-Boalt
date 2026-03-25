@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Autoplay from "embla-carousel-autoplay"
 import {
   Carousel,
@@ -15,6 +15,30 @@ export default function HeroBanner({ onNavigate }) {
     "/src/assets/images/Hero/hero3.jpeg"
   ]
 
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [api, setApi] = useState(null)
+
+  const handleDotClick = (index) => {
+    if (api) {
+      api.scrollTo(index)
+    }
+  }
+
+  useEffect(() => {
+    if (!api) return
+
+    const onSelect = () => {
+      setCurrentIndex(api.selectedScrollSnap())
+    }
+
+    api.on("select", onSelect)
+    onSelect()
+
+    return () => {
+      api.off("select", onSelect)
+    }
+  }, [api])
+
   return (
     <Carousel
       plugins={[
@@ -24,6 +48,7 @@ export default function HeroBanner({ onNavigate }) {
         }),
       ]}
       className="w-full"
+      setApi={setApi}
     >
       <CarouselContent>
         {images.map((img, index) => (
@@ -37,7 +62,7 @@ export default function HeroBanner({ onNavigate }) {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/40 flex items-center px-4 md:px-8 lg:px-20">
+              <div className="absolute inset-0 bg-black/40 flex items-center px-10 md:px-20 lg:px-48">
                 <div className="text-white max-w-2xl">
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                     We build stories that connect
@@ -62,17 +87,27 @@ export default function HeroBanner({ onNavigate }) {
                       View Work
                     </button>
                   </div>
+
+                  {/* Carousel Dots */}
+                  <div className="mt-8 flex gap-2">
+                    {images.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => handleDotClick(index)}
+                        className={`h-1 transition-all cursor-pointer hover:opacity-80 ${
+                          index === currentIndex 
+                            ? 'w-8 bg-white shadow-lg shadow-white/60' 
+                            : 'w-2 bg-white/50'
+                        }`}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
           </CarouselItem>
         ))}
       </CarouselContent>
-
-      <div className="hidden md:block">
-        <CarouselPrevious className="left-4 lg:left-8" />
-        <CarouselNext className="right-4 lg:right-8" />
-      </div>
     </Carousel>
   )
 }

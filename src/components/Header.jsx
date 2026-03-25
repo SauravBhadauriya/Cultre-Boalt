@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Button } from './ui/button'
 import { Menu, X } from 'lucide-react'
 
@@ -7,7 +7,7 @@ export default function Header({ onNavigate }) {
 
   const menuItems = [
     { name: "Design", link: "#design", action: () => onNavigate('design') },
-    { name: "P R", link: "#p-r", action: () => onNavigate('PR') },
+    { name: "PR", link: "#p-r", action: () => onNavigate('PR') },
     { name: "Why Us", link: "#why-us", action: () => onNavigate('why-us') },
     { name: "Social", link: "#social", action: () => onNavigate('social') },
     { name: "About", link: "#about", action: () => onNavigate('about') },
@@ -24,7 +24,7 @@ export default function Header({ onNavigate }) {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
-      <nav className="flex justify-between items-center px-4 md:px-8 lg:px-20 py-4">
+      <nav className="flex justify-between items-center px-10 md:px-20 lg:px-48 py-4">
         {/* Logo */}
         <div className="flex items-center">
           <button 
@@ -59,7 +59,7 @@ export default function Header({ onNavigate }) {
             onClick={() => {
               handleMenuClick({ action: () => onNavigate('contact') })
             }}
-            className="bg-blue-600 hover:bg-blue-700 cursor-pointer"
+            className="bg-blue-500 hover:bg-blue-600 cursor-pointer"
           >
             Get Started
           </Button>
@@ -97,7 +97,7 @@ export default function Header({ onNavigate }) {
               onClick={() => {
                 handleMenuClick({ action: () => onNavigate('contact') })
               }}
-              className="w-full bg-blue-600 hover:bg-blue-700 cursor-pointer"
+              className="w-full bg-blue-500 hover:bg-blue-600 cursor-pointer"
             >
               Get Started
             </Button>
