@@ -9,7 +9,7 @@ export default function Header() {
 
   const menuItems = [
     { name: "Design", path: "/design" },
-    { name: "P R", path: "/pr" },
+    { name: "PR", path: "/pr" },
     { name: "Why Us", path: "/why-us" },
     { name: "Social", path: "/social" },
     { name: "About", path: "/about" },
