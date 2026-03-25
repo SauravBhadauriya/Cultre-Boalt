@@ -1,29 +1,15 @@
 import { Card, CardContent } from '@/components/ui/card'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel'
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
+import SectionHeader from '@/components/ui/SectionHeader'
 import { testimonialsData } from '@/data/testimonialsData'
 
 export default function Testimonials() {
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
+    <section className="section-base bg-white">
+      <div className="container-base">
         <Carousel className="w-full" opts={{ align: 'start', loop: true }}>
-
-          {/* Header Row */}
           <div className="flex items-start justify-between mb-12">
-            <div>
-              <p className="text-blue-500 font-bold text-sm uppercase tracking-widest mb-3">
-                {testimonialsData.subtitle}
-              </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
-                {testimonialsData.title}
-              </h2>
-            </div>
+            <SectionHeader label={testimonialsData.subtitle} title={testimonialsData.title} center={false} />
             <div className="hidden md:flex items-center gap-3 mt-2">
               <CarouselPrevious className="static translate-y-0 rounded-md border border-slate-300 bg-white hover:bg-slate-50 text-slate-700" />
               <CarouselNext className="static translate-y-0 rounded-md border border-slate-300 bg-white hover:bg-slate-50 text-slate-700" />

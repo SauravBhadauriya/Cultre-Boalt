@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { CheckCircle, ArrowLeft } from 'lucide-react'
 
 export default function WhyChooseUs() {
+  const navigate = useNavigate()
   const benefits = [
     {
       title: "Strategic Approach",
@@ -33,17 +34,17 @@ export default function WhyChooseUs() {
   return (
     <div className="min-h-screen bg-white">
       {/* Dark Header Section */}
-      <div className="bg-slate-900 text-white py-16 md:py-20 lg:py-24 px-4">
-        <div className="max-w-6xl mx-auto">
-          {onBack && (
-            <button
-              onClick={() => navigate(-1)}
-              className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors mb-8"
-            >
-              <ArrowLeft className="w-5 h-5" />
-              Back
-            </button>
-          )}
+      <div className="page-hero">
+        <img src="/src/assets/images/Hero/herobanner.jpg" alt="hero" className="absolute inset-0 w-full h-full object-cover object-center" />
+        <div className="absolute inset-0 bg-slate-900/75" />
+        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48 relative z-10 h-full flex flex-col justify-center">
+          <button
+            onClick={() => navigate(-1)}
+            className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors mb-8"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            Back
+          </button>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             Why Choose Cultre Boat
           </h1>
@@ -90,4 +91,13 @@ export default function WhyChooseUs() {
     </div>
   )
 }
+
+
+
+
+
+
+
+
+
 

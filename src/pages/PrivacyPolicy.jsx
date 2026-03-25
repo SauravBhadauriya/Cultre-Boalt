@@ -8,8 +8,10 @@ export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-white">
       {/* Dark Header Section */}
-      <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-12 md:py-16">
-        <div className="max-w-4xl mx-auto px-4 md:px-8">
+      <div className="page-hero">
+        <img src="/src/assets/images/Hero/herobanner.jpg" alt="hero" className="absolute inset-0 w-full h-full object-cover object-center" />
+        <div className="absolute inset-0 bg-slate-900/75" />
+        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48 relative z-10 h-full flex flex-col justify-center">
           <Button
             onClick={() => navigate(-1)}
             variant="ghost"
@@ -249,5 +251,15 @@ export default function PrivacyPolicy() {
     </div>
   )
 }
+
+
+
+
+
+
+
+
+
+
 
 

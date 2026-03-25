@@ -3,8 +3,8 @@ import { aboutUsData } from '@/data/aboutUsData'
 
 export default function AboutUsSection() {
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
+    <section className="section-base bg-white">
+      <div className="container-base">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
           {/* Left Side - Images Grid */}
           <div className="lg:col-span-2 grid grid-cols-2 gap-4 h-[500px]">

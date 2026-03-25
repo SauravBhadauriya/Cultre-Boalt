@@ -128,3 +128,76 @@
     @apply font-sans;
     }
 }
+
+/* =============================================
+   PROJECT DESIGN TOKENS
+   ============================================= */
+:root {
+  /* Brand Colors */
+  --brand-teal: #0f766e;        /* teal-700 - main bg for dark sections */
+  --brand-teal-light: #0d9488;  /* teal-600 - cards on dark bg */
+  --brand-blue: #2563eb;        /* blue-600 - primary action */
+  --brand-fuchsia: #c026d3;     /* fuchsia-600 - accent/highlight */
+  --brand-purple: #7c3aed;      /* purple-600 - gradient start */
+
+  /* Layout */
+  --section-py: theme(spacing.16) theme(spacing.24);
+  --container-px: theme(spacing.10) theme(spacing.20) theme(spacing.48);
+
+  /* Typography */
+  --heading-xl: theme(fontSize.4xl);
+  --heading-lg: theme(fontSize.3xl);
+  --label-size: theme(fontSize.sm);
+}
+
+/* =============================================
+   REUSABLE UTILITY CLASSES
+   ============================================= */
+
+/* Section wrapper */
+.section-base {
+  @apply py-16 md:py-24;
+}
+
+/* Container with navbar-aligned padding */
+.container-base {
+  @apply max-w-7xl mx-auto px-10 md:px-20 lg:px-48;
+}
+
+/* Section header label (e.g. "OUR PORTFOLIO") */
+.section-label {
+  @apply text-blue-600 font-bold text-sm uppercase tracking-widest mb-3;
+}
+
+/* Section heading */
+.section-heading {
+  @apply text-3xl md:text-4xl font-bold text-slate-900;
+}
+
+/* Section heading on dark bg */
+.section-heading-white {
+  @apply text-3xl md:text-4xl font-bold text-white;
+}
+
+/* Dark teal section bg */
+.bg-brand-teal {
+  background-color: var(--brand-teal);
+}
+
+/* Page hero banner - consistent across all inner pages */
+.page-hero {
+  @apply relative text-white overflow-hidden;
+  height: 420px;
+}
+
+.page-hero img {
+  @apply absolute inset-0 w-full h-full;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* Back button used across pages */
+.back-btn {
+  @apply flex items-center gap-2 text-slate-300 hover:text-white transition-colors mb-8 cursor-pointer;
+}

@@ -1,27 +1,16 @@
 import { useRef } from 'react'
 import Autoplay from "embla-carousel-autoplay"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import SectionHeader from '@/components/ui/SectionHeader'
 import { brandPartners } from '@/data/brandData'
 
 export default function Brands() {
-  const plugin = useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: true })
-  )
+  const plugin = useRef(Autoplay({ delay: 4000, stopOnInteraction: true }))
 
   return (
-    <section className="py-16 md:py-24 bg-white">
-      {/* Brand Partners Section */}
-      <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
-        <div className="text-center mb-12">
-          <p className="text-blue-500 font-bold text-sm uppercase tracking-widest mb-3">Our Partners</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Trusted by Leading Brands</h2>
-        </div>
+    <section className="section-base bg-white">
+      <div className="container-base">
+        <SectionHeader label="Our Partners" title="Trusted by Leading Brands" />
 
         {/* Brand Partners Carousel */}
         <Carousel

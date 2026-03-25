@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
+import SectionHeader from '@/components/ui/SectionHeader'
 import { newsEventsData } from '@/data/newsEventsData'
 
 export default function NewsEvents() {
@@ -10,17 +11,9 @@ export default function NewsEvents() {
   const displayedItems = showAll ? newsEventsData.newsItems : newsEventsData.newsItems.slice(0, 4)
 
   return (
-    <section className="py-16 md:py-24 bg-teal-700">
-      <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <p className="text-teal-100 font-bold text-sm uppercase tracking-widest mb-3">
-            {newsEventsData.subtitle}
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
-            {newsEventsData.title}
-          </h2>
-        </div>
+    <section className="section-base bg-teal-700">
+      <div className="container-base">
+        <SectionHeader label={newsEventsData.subtitle} title={newsEventsData.title} dark />
 
         {/* News Grid - 2x2 Layout with Image Left, Content Right */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">

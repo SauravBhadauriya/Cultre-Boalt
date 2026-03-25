@@ -8,8 +8,10 @@ export default function About() {
   return (
     <div className="min-h-screen bg-white">
       {/* Dark Header Section */}
-      <div className="bg-slate-900 text-white py-16 md:py-20 lg:py-24 px-4">
-        <div className="max-w-7xl mx-auto">
+      <div className="page-hero">
+        <img src="/src/assets/images/Hero/herobanner.jpg" alt="hero" className="absolute inset-0 w-full h-full object-cover object-center" />
+        <div className="absolute inset-0 bg-slate-900/75" />
+        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48 relative z-10 h-full flex flex-col justify-center">
           <button
             onClick={() => navigate(-1)}
             className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors mb-8"
@@ -28,7 +30,7 @@ export default function About() {
 
       {/* Company Overview Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Info */}
             <div>
@@ -79,7 +81,7 @@ export default function About() {
 
       {/* Mission & Vision Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4 bg-slate-50">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Mission */}
             <div className="bg-white p-8 rounded-lg border border-slate-200">
@@ -106,7 +108,7 @@ export default function About() {
 
       {/* Values Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
             Our Core Values
           </h2>
@@ -127,7 +129,7 @@ export default function About() {
 
       {/* Achievements Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4 bg-slate-50">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
             Our Achievements
           </h2>
@@ -149,7 +151,7 @@ export default function About() {
 
       {/* Our Process Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
             Our Process
           </h2>
@@ -175,7 +177,7 @@ export default function About() {
 
       {/* Team Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4 bg-slate-50">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
             Meet Our Team
           </h2>
@@ -205,7 +207,7 @@ export default function About() {
 
       {/* Testimonials Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
             What Our Clients Say
           </h2>
@@ -237,7 +239,7 @@ export default function About() {
 
       {/* Why Choose Us Section (Similar to WhyChooseUs component) */}
       <section className="py-12 md:py-16 lg:py-20 px-4 bg-slate-50">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
             Why Choose Cultre Boat
           </h2>
@@ -349,3 +351,13 @@ export default function About() {
     </div>
   )
 }
+
+
+
+
+
+
+
+
+
+

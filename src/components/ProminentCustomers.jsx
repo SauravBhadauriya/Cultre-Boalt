@@ -1,12 +1,7 @@
 import { useState, useRef } from 'react'
 import Autoplay from 'embla-carousel-autoplay'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel'
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
+import SectionHeader from '@/components/ui/SectionHeader'
 import { customersData } from '@/data/customersData'
 
 export default function ProminentCustomers() {
@@ -19,17 +14,9 @@ export default function ProminentCustomers() {
   const activeCustomers = customersData.regions.find(r => r.id === activeRegion)?.customers || []
 
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
-        {/* Header */}
-        <div className="mb-8">
-          <p className="text-blue-500 font-bold text-sm uppercase tracking-widest mb-3">
-            {customersData.subtitle}
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
-            {customersData.title}
-          </h2>
-        </div>
+    <section className="section-base bg-white">
+      <div className="container-base">
+        <SectionHeader label={customersData.subtitle} title={customersData.title} center={false} />
 
         {/* Region Tabs */}
         <div className="flex gap-1 mb-10 border-b border-slate-200 overflow-x-auto">

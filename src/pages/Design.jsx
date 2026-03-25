@@ -14,8 +14,10 @@ export default function Design() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-slate-800 to-slate-900 text-white py-12 md:py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto px-4">
+      <div className="page-hero">
+        <img src="/src/assets/images/Hero/herobanner.jpg" alt="hero" className="absolute inset-0 w-full h-full object-cover object-center" />
+        <div className="absolute inset-0 bg-slate-900/75" />
+        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48 relative z-10 h-full flex flex-col justify-center">
           <button
             onClick={() => navigate(-1)}
             className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors mb-4"
@@ -177,5 +179,13 @@ export default function Design() {
     </div>
   )
 }
+
+
+
+
+
+
+
+
 
 

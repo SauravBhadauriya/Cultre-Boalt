@@ -4,13 +4,16 @@ import { socialData } from '@/data/socialData'
 import { ArrowLeft, CheckCircle } from 'lucide-react'
 
 export default function Social() {
+  const navigate = useNavigate()
   const [selectedCampaign, setSelectedCampaign] = useState(null)
 
   return (
     <div className="min-h-screen bg-white">
       {/* Dark Header Section */}
-      <div className="bg-slate-900 text-white py-16 md:py-20 lg:py-24 px-4">
-        <div className="max-w-7xl mx-auto">
+      <div className="page-hero">
+        <img src="/src/assets/images/Hero/herobanner.jpg" alt="hero" className="absolute inset-0 w-full h-full object-cover object-center" />
+        <div className="absolute inset-0 bg-slate-900/75" />
+        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48 relative z-10 h-full flex flex-col justify-center">
           <button
             onClick={() => navigate(-1)}
             className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors mb-8"
@@ -29,7 +32,7 @@ export default function Social() {
 
       {/* Services Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
             Our Services
           </h2>
@@ -50,7 +53,7 @@ export default function Social() {
 
       {/* Statistics Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4 bg-slate-50">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
             Our Impact
           </h2>
@@ -72,7 +75,7 @@ export default function Social() {
 
       {/* Platforms Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
             Platforms We Manage
           </h2>
@@ -94,7 +97,7 @@ export default function Social() {
 
       {/* Campaigns Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4 bg-slate-50">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
             Featured Campaigns
           </h2>
@@ -169,7 +172,7 @@ export default function Social() {
 
       {/* Testimonials Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
             What Our Clients Say
           </h2>
@@ -201,7 +204,7 @@ export default function Social() {
 
       {/* Why Choose Us Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4 bg-slate-50">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
             Why Choose Us for Social Media
           </h2>
@@ -313,5 +316,15 @@ export default function Social() {
     </div>
   )
 }
+
+
+
+
+
+
+
+
+
+
 
 

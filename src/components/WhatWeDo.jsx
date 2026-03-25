@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Palette, Megaphone, Share2 } from 'lucide-react'
+import SectionHeader from '@/components/ui/SectionHeader'
 
 export default function WhatWeDo() {
   const services = [
@@ -22,9 +23,8 @@ export default function WhatWeDo() {
   ]
 
   return (
-    <section id="services" className="py-16 md:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
-        {/* Header */}
+    <section id="services" className="section-base bg-white">
+      <div className="container-base">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-slate-900">
             What We Do
