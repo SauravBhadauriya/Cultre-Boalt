@@ -26,7 +26,7 @@ export default function ProminentCustomers() {
               onClick={() => setActiveRegion(region.id)}
               className={`px-5 py-2 text-sm font-medium whitespace-nowrap transition-all duration-200 cursor-pointer rounded-t-md ${
                 activeRegion === region.id
-                  ? 'bg-fuchsia-100 text-fuchsia-600 border-b-2 border-fuchsia-500'
+                  ? 'bg-[var(--brand-fuchsia)]/10 text-[var(--brand-fuchsia)] border-b-2 border-[var(--brand-fuchsia)]'
                   : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
               }`}
             >

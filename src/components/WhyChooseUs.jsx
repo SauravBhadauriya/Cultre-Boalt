@@ -71,10 +71,10 @@ export default function WhyChooseUs() {
           {benefits.map((benefit, index) => (
             <div 
               key={index} 
-              className="p-6 md:p-8 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 hover:border-blue-200"
+              className="p-6 md:p-8 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 hover:border-[var(--brand-blue)]/30"
             >
               <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                <CheckCircle className="w-6 h-6 text-[var(--brand-blue)] flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="text-lg md:text-xl font-bold mb-2 text-slate-900">
                     {benefit.title}

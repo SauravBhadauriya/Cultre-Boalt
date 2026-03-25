@@ -29,7 +29,7 @@ export default function About() {
       </div>
 
       {/* Company Overview Section */}
-      <section className="py-12 md:py-16 lg:py-20 px-4">
+      <section className="section-base px-4">
         <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Info */}
@@ -68,7 +68,7 @@ export default function About() {
             </div>
 
             {/* Right Side - Image */}
-            <div className="h-96 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg overflow-hidden">
+            <div className="h-96 bg-[var(--brand-blue)] rounded-lg overflow-hidden">
               <img
                 src={aboutData.team[0].image}
                 alt="Company"
@@ -136,7 +136,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {aboutData.achievements.map(achievement => (
               <div key={achievement.id} className="text-center">
-                <div className="text-5xl font-bold text-blue-600 mb-2">
+                <div className="text-5xl font-bold text-[var(--brand-blue)] mb-2">
                   {achievement.value}
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-1">
@@ -162,7 +162,7 @@ export default function About() {
                 className="relative bg-white p-8 rounded-lg border border-slate-200 hover:shadow-lg transition-shadow"
               >
                 {/* Step Number */}
-                <div className="absolute -top-4 -left-4 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                <div className="absolute -top-4 -left-4 w-10 h-10 bg-[var(--brand-blue)] text-white rounded-full flex items-center justify-center font-bold">
                   {index + 1}
                 </div>
 
@@ -196,7 +196,7 @@ export default function About() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-lg font-bold text-slate-900 mb-1">{member.name}</h3>
-                  <p className="text-sm font-semibold text-blue-600 mb-3">{member.role}</p>
+                  <p className="text-sm font-semibold text-[var(--brand-blue)] mb-3">{member.role}</p>
                   <p className="text-slate-600 text-sm leading-relaxed">{member.bio}</p>
                 </div>
               </div>
@@ -246,7 +246,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                <CheckCircle className="w-6 h-6 text-[var(--brand-blue)] flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="text-lg font-bold text-slate-900 mb-2">
                     Strategic Approach
@@ -260,7 +260,7 @@ export default function About() {
 
             <div className="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                <CheckCircle className="w-6 h-6 text-[var(--brand-blue)] flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="text-lg font-bold text-slate-900 mb-2">
                     Creative Excellence
@@ -274,7 +274,7 @@ export default function About() {
 
             <div className="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                <CheckCircle className="w-6 h-6 text-[var(--brand-blue)] flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="text-lg font-bold text-slate-900 mb-2">
                     Close Collaboration
@@ -288,7 +288,7 @@ export default function About() {
 
             <div className="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                <CheckCircle className="w-6 h-6 text-[var(--brand-blue)] flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="text-lg font-bold text-slate-900 mb-2">
                     Measurable Results
@@ -302,7 +302,7 @@ export default function About() {
 
             <div className="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                <CheckCircle className="w-6 h-6 text-[var(--brand-blue)] flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="text-lg font-bold text-slate-900 mb-2">
                     Digital Expertise
@@ -316,7 +316,7 @@ export default function About() {
 
             <div className="p-8 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                <CheckCircle className="w-6 h-6 text-[var(--brand-blue)] flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="text-lg font-bold text-slate-900 mb-2">
                     Storytelling
@@ -332,7 +332,7 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-16 lg:py-20 px-4 bg-teal-700 text-white">
+      <section className="py-12 md:py-16 lg:py-20 px-4 bg-brand-teal text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Work With Us?
@@ -342,7 +342,7 @@ export default function About() {
           </p>
           <button
             onClick={() => navigate(-1)}
-            className="bg-white text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-full transition-colors"
+            className="bg-white text-[var(--brand-blue)] hover:bg-blue-50 font-bold py-3 px-8 rounded-full transition-colors"
           >
             Get Started
           </button>

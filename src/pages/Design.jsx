@@ -43,7 +43,7 @@ export default function Design() {
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-2 rounded-full font-semibold transition-all ${
                 selectedCategory === 'all'
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-[var(--brand-blue)] text-white'
                   : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
               }`}
             >
@@ -55,7 +55,7 @@ export default function Design() {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-2 rounded-full font-semibold transition-all ${
                   selectedCategory === category.id
-                    ? 'bg-blue-600 text-white'
+                    ? 'bg-[var(--brand-blue)] text-white'
                     : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                 }`}
               >
@@ -71,26 +71,25 @@ export default function Design() {
             <div
               key={project.id}
               onClick={() => setSelectedProject(project)}
-              className="group cursor-pointer relative overflow-hidden rounded-lg bg-slate-100 aspect-square hover:shadow-xl transition-all duration-300"
+              className="group cursor-pointer relative overflow-hidden rounded-lg bg-slate-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col"
             >
               {/* Image */}
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-              />
-
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 flex items-end p-4 md:p-6">
-                <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="text-lg md:text-xl font-bold mb-1">{project.title}</h3>
-                  <p className="text-sm text-slate-200">{project.description}</p>
+              <div className="relative aspect-square overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                {/* Category Badge */}
+                <div className="absolute top-3 right-3 bg-[var(--brand-blue)] text-white text-xs font-semibold px-3 py-1 rounded-full">
+                  {designData.categories.find(c => c.id === project.category)?.name}
                 </div>
               </div>
 
-              {/* Category Badge */}
-              <div className="absolute top-3 right-3 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                {designData.categories.find(c => c.id === project.category)?.name}
+              {/* Card Info - always visible */}
+              <div className="p-4 bg-white flex-1">
+                <h3 className="text-base font-bold text-slate-900 mb-1">{project.title}</h3>
+                <p className="text-sm text-slate-500 line-clamp-2">{project.description}</p>
               </div>
             </div>
           ))}
@@ -109,14 +108,14 @@ export default function Design() {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
           <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             {/* Modal Header */}
-            <div className="sticky top-0 bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6 flex justify-between items-center">
+            <div className="sticky top-0 bg-[var(--brand-blue)] text-white p-6 flex justify-between items-center">
               <div>
                 <h2 className="text-2xl font-bold">{selectedProject.title}</h2>
                 <p className="text-blue-100 text-sm mt-1">{selectedProject.year}</p>
               </div>
               <button
                 onClick={() => setSelectedProject(null)}
-                className="p-2 hover:bg-blue-500 rounded-full transition-colors"
+                className="p-2 hover:bg-white/20 rounded-full transition-colors"
               >
                 <X className="w-6 h-6" />
               </button>
@@ -168,7 +167,7 @@ export default function Design() {
               {/* Close Button */}
               <button
                 onClick={() => setSelectedProject(null)}
-                className="w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                className="w-full mt-6 bg-[var(--brand-blue)] hover:opacity-90 text-white font-bold py-3 px-6 rounded-lg transition-colors"
               >
                 Close
               </button>

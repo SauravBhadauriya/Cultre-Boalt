@@ -2,9 +2,11 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Button } from './ui/button'
 import { Menu, X } from 'lucide-react'
+import ContactModal from './ContactModal'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const navigate = useNavigate()
 
   const menuItems = [
@@ -13,7 +15,6 @@ export default function Header() {
     { name: "Why Us", path: "/why-us" },
     { name: "Social", path: "/social" },
     { name: "About", path: "/about" },
-    { name: "Career", path: "/career" },
     { name: "Contact", path: "/contact" },
   ]
 
@@ -30,10 +31,10 @@ export default function Header() {
           onClick={() => handleNav('/')}
           className="flex flex-col items-start cursor-pointer group"
         >
-          <span className="text-xl md:text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+          <span className="text-xl md:text-2xl font-bold text-slate-900 group-hover:text-[var(--brand-blue)] transition-colors">
             Cultre Boat
           </span>
-          <span className="text-xs md:text-sm text-slate-600 group-hover:text-blue-600 transition-colors font-medium">
+          <span className="text-xs md:text-sm text-slate-600 group-hover:text-[var(--brand-blue)] transition-colors font-medium">
             Connect . Create . Captivate
           </span>
         </button>
@@ -50,12 +51,14 @@ export default function Header() {
               </button>
             </li>
           ))}
-          <Button
-            onClick={() => handleNav('/contact')}
-            className="bg-blue-600 hover:bg-blue-700 cursor-pointer"
-          >
-            Get Started
-          </Button>
+          <li>
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="bg-[var(--brand-blue)] hover:opacity-90 cursor-pointer text-white text-sm font-medium px-4 py-2 rounded-lg transition-opacity"
+            >
+              Get Started
+            </button>
+          </li>
         </ul>
 
         {/* Mobile Menu Button */}
@@ -83,14 +86,16 @@ export default function Header() {
               </li>
             ))}
             <Button
-              onClick={() => handleNav('/contact')}
-              className="w-full bg-blue-600 hover:bg-blue-700 cursor-pointer"
+              onClick={() => { setIsModalOpen(true); setIsOpen(false) }}
+              className="w-full bg-[var(--brand-blue)] hover:opacity-90 cursor-pointer"
             >
               Get Started
             </Button>
           </ul>
         </div>
       )}
+
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </header>
   )
 }

@@ -5,6 +5,7 @@ import { Button } from '../components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card'
 
 export default function PrivacyPolicy() {
+  const navigate = useNavigate()
   return (
     <div className="min-h-screen bg-white">
       {/* Dark Header Section */}
@@ -12,14 +13,13 @@ export default function PrivacyPolicy() {
         <img src="/src/assets/images/Hero/herobanner.jpg" alt="hero" className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-slate-900/75" />
         <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48 relative z-10 h-full flex flex-col justify-center">
-          <Button
+          <button
             onClick={() => navigate(-1)}
-            variant="ghost"
-            className="flex items-center gap-2 mb-6 text-white hover:text-blue-400 hover:bg-transparent transition-colors cursor-pointer"
+            className="back-btn self-start"
           >
             <ArrowLeft className="w-5 h-5" />
-            <span>Back</span>
-          </Button>
+            Back
+          </button>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
           <p className="text-slate-300 text-lg">
             Your privacy is important to us. Learn how we collect, use, and protect your data.
@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
       {/* Content Section */}
       <div className="max-w-4xl mx-auto px-4 md:px-8 py-12 md:py-16">
         {/* Last Updated */}
-        <Card className="mb-8 border-l-4 border-blue-600">
+        <Card className="mb-8 border-l-4 border-[var(--brand-blue)]">
           <CardContent className="pt-6">
             <p className="text-slate-700">
               <span className="font-semibold">Last Updated:</span> March 25, 2026
@@ -240,7 +240,7 @@ export default function PrivacyPolicy() {
         </Card>
 
         {/* Acknowledgment */}
-        <Card className="mt-16 border-l-4 border-blue-600">
+        <Card className="mt-16 border-l-4 border-[var(--brand-blue)]">
           <CardContent className="pt-6">
             <p className="text-slate-700">
               By using our website and services, you acknowledge that you have read and understood this Privacy Policy and agree to be bound by its terms.

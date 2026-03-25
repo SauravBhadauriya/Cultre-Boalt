@@ -1,46 +1,47 @@
-import React from 'react'
+import { useRef } from 'react'
+import Autoplay from 'embla-carousel-autoplay'
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import { aboutUsData } from '@/data/aboutUsData'
 
 export default function AboutUsSection() {
+  const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: false }))
+
   return (
     <section className="section-base bg-white">
       <div className="container-base">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
-          {/* Left Side - Images Grid */}
-          <div className="lg:col-span-2 grid grid-cols-2 gap-4 h-[500px]">
-            {/* Large image top left */}
-            <div className="col-span-1 row-span-2">
-              <img
-                src={aboutUsData.images[0]}
-                alt="Team member 1"
-                className="w-full h-full object-cover rounded-2xl shadow-lg"
-              />
-            </div>
 
-            {/* Top right image */}
-            <div className="col-span-1">
-              <img
-                src={aboutUsData.images[1]}
-                alt="Team member 2"
-                className="w-full h-full object-cover rounded-2xl shadow-lg"
-              />
-            </div>
-
-            {/* Bottom right image */}
-            <div className="col-span-1">
-              <img
-                src={aboutUsData.images[2]}
-                alt="Team member 3"
-                className="w-full h-full object-cover rounded-2xl shadow-lg"
-              />
-            </div>
+          {/* Left Side - Image Carousel */}
+          <div className="lg:col-span-2 h-[500px]">
+            <Carousel
+              plugins={[plugin.current]}
+              opts={{ loop: true, duration: 60 }}
+              className="w-full h-full"
+            >
+              <CarouselContent className="h-full">
+                {aboutUsData.images.map((img, i) => (
+                  <CarouselItem key={i} className="h-full">
+                    <div className="h-[500px] rounded-2xl overflow-hidden shadow-lg">
+                      <img
+                        src={img}
+                        alt={`Team ${i + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex justify-center gap-3 mt-4">
+                <CarouselPrevious className="static translate-y-0" />
+                <CarouselNext className="static translate-y-0" />
+              </div>
+            </Carousel>
           </div>
 
           {/* Right Side - Content */}
           <div className="lg:col-span-3 space-y-6">
-            {/* Header */}
             <div>
-              <p className="text-blue-500 font-bold text-sm uppercase tracking-widest mb-3">
+              <p className="text-[var(--brand-blue)] font-bold text-sm uppercase tracking-widest mb-3">
                 About Us
               </p>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
@@ -48,30 +49,23 @@ export default function AboutUsSection() {
               </h2>
             </div>
 
-            {/* Description */}
             <p className="text-slate-600 text-base md:text-lg leading-relaxed">
               {aboutUsData.description}
             </p>
 
-            {/* Highlights Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
               {aboutUsData.highlights.map((highlight, index) => (
-                <div key={index} className="space-y-2">
-                  <div className="flex items-start gap-3">
-                    <span className="text-2xl">{highlight.icon}</span>
-                    <div>
-                      <h3 className="font-semibold text-slate-900">
-                        {highlight.title}
-                      </h3>
-                      <p className="text-slate-600 text-sm">
-                        {highlight.description}
-                      </p>
-                    </div>
+                <div key={index} className="flex items-start gap-3">
+                  <span className="text-2xl">{highlight.icon}</span>
+                  <div>
+                    <h3 className="font-semibold text-slate-900">{highlight.title}</h3>
+                    <p className="text-slate-600 text-sm">{highlight.description}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
+
         </div>
       </div>
     </section>

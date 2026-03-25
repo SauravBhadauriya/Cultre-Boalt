@@ -77,14 +77,14 @@ export default function ContactModal({ isOpen, onClose }) {
       {/* Modal */}
       <div className="relative bg-white rounded-lg shadow-xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
         {/* Header */}
-        <div className="sticky top-0 bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6 flex justify-between items-center">
+        <div className="sticky top-0 bg-[var(--brand-blue)] text-white p-6 flex justify-between items-center">
           <div>
             <h2 className="text-2xl font-bold">Get In Touch</h2>
             <p className="text-blue-100 text-sm mt-1">Tell us about your project</p>
           </div>
           <button
             onClick={onClose}
-            className="p-2 hover:bg-blue-500 rounded-full transition-colors"
+            className="p-2 hover:bg-white/20 rounded-full transition-colors"
             aria-label="Close"
           >
             <X className="w-6 h-6" />
@@ -129,7 +129,7 @@ export default function ContactModal({ isOpen, onClose }) {
                     placeholder={field.placeholder}
                     rows={4}
                     required={field.required}
-                    className="w-full px-4 py-2 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all resize-none text-sm"
+                    className="w-full px-4 py-2 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-[var(--brand-blue)] focus:ring-2 focus:ring-[var(--brand-blue)]/10 transition-all resize-none text-sm"
                   />
                 ) : (
                   <input
@@ -140,7 +140,7 @@ export default function ContactModal({ isOpen, onClose }) {
                     onChange={handleChange}
                     placeholder={field.placeholder}
                     required={field.required}
-                    className="w-full px-4 py-2 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all text-sm"
+                    className="w-full px-4 py-2 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-[var(--brand-blue)] focus:ring-2 focus:ring-[var(--brand-blue)]/10 transition-all text-sm"
                   />
                 )}
               </div>
@@ -150,7 +150,7 @@ export default function ContactModal({ isOpen, onClose }) {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 uppercase tracking-wide mt-6"
+              className="w-full bg-[var(--brand-blue)] hover:opacity-90 disabled:bg-slate-400 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 uppercase tracking-wide mt-6"
             >
               {loading ? 'Submitting...' : 'Submit'}
             </button>

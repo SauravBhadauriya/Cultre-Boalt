@@ -12,7 +12,7 @@ export default function CTASection() {
     <>
       <section 
         id="contact" 
-        className="py-12 md:py-16 lg:py-20 bg-teal-700 text-white"
+        className="py-12 md:py-16 lg:py-20 bg-brand-teal text-white"
       >
         <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48 text-center">
           {/* Heading */}
@@ -30,7 +30,7 @@ export default function CTASection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               onClick={() => setIsModalOpen(true)}
-              className="bg-white text-blue-600 hover:bg-blue-50 hover:scale-105 transition-all duration-300 font-bold text-base md:text-lg px-6 md:px-8 py-6 rounded-full w-full sm:w-auto cursor-pointer"
+              className="bg-white text-[var(--brand-blue)] hover:bg-blue-50 hover:scale-105 transition-all duration-300 font-bold text-base md:text-lg px-6 md:px-8 py-6 rounded-full w-full sm:w-auto cursor-pointer"
             >
               <Mail className="mr-2 h-5 w-5" />
               Contact Us

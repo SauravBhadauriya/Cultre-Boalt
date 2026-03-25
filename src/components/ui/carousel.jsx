@@ -18,6 +18,7 @@ function Carousel({
   const [carouselRef, api] = useEmblaCarousel({
     ...opts,
     axis: orientation === "horizontal" ? "x" : "y",
+    duration: opts?.duration ?? 40,
   }, plugins)
   const [canScrollPrev, setCanScrollPrev] = React.useState(false)
   const [canScrollNext, setCanScrollNext] = React.useState(false)

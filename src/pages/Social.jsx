@@ -60,7 +60,7 @@ export default function Social() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {socialData.statistics.map(stat => (
               <div key={stat.id} className="text-center">
-                <div className="text-5xl font-bold text-blue-600 mb-2">
+                <div className="text-5xl font-bold text-[var(--brand-blue)] mb-2">
                   {stat.value}
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-1">
@@ -87,7 +87,7 @@ export default function Social() {
               >
                 <div className="text-4xl mb-4">{platform.icon}</div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">{platform.name}</h3>
-                <p className="text-blue-600 font-semibold mb-3">{platform.followers}</p>
+                <p className="text-[var(--brand-blue)] font-semibold mb-3">{platform.followers}</p>
                 <p className="text-slate-600 leading-relaxed">{platform.description}</p>
               </div>
             ))}
@@ -109,7 +109,7 @@ export default function Social() {
                 className="bg-white p-8 rounded-lg border border-slate-200 hover:shadow-lg transition-all cursor-pointer"
               >
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{campaign.title}</h3>
-                <p className="text-blue-600 font-semibold mb-2">{campaign.platform}</p>
+                <p className="text-[var(--brand-blue)] font-semibold mb-2">{campaign.platform}</p>
                 <p className="text-slate-600 mb-4">{campaign.description}</p>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
@@ -144,25 +144,25 @@ export default function Social() {
                 ×
               </button>
             </div>
-            <p className="text-blue-600 font-semibold mb-4">{selectedCampaign.platform}</p>
+            <p className="text-[var(--brand-blue)] font-semibold mb-4">{selectedCampaign.platform}</p>
             <p className="text-slate-700 mb-6">{selectedCampaign.description}</p>
             <div className="grid grid-cols-2 gap-6 mb-6">
               <div>
                 <p className="text-sm font-semibold text-slate-600 uppercase tracking-wide mb-2">
                   Total Reach
                 </p>
-                <p className="text-3xl font-bold text-blue-600">{selectedCampaign.reach}</p>
+                <p className="text-3xl font-bold text-[var(--brand-blue)]">{selectedCampaign.reach}</p>
               </div>
               <div>
                 <p className="text-sm font-semibold text-slate-600 uppercase tracking-wide mb-2">
                   Engagement Rate
                 </p>
-                <p className="text-3xl font-bold text-blue-600">{selectedCampaign.engagement}</p>
+                <p className="text-3xl font-bold text-[var(--brand-blue)]">{selectedCampaign.engagement}</p>
               </div>
             </div>
             <button
               onClick={() => setSelectedCampaign(null)}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+              className="w-full bg-[var(--brand-blue)] hover:opacity-90 text-white font-bold py-3 px-6 rounded-lg transition-colors"
             >
               Close
             </button>
@@ -297,7 +297,7 @@ export default function Social() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-16 lg:py-20 px-4 bg-teal-700 text-white">
+      <section className="py-12 md:py-16 lg:py-20 px-4 bg-brand-teal text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Grow Your Social Media?
@@ -307,7 +307,7 @@ export default function Social() {
           </p>
           <button
             onClick={() => navigate(-1)}
-            className="bg-white text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-full transition-colors"
+            className="bg-white text-[var(--brand-blue)] hover:bg-blue-50 font-bold py-3 px-8 rounded-full transition-colors"
           >
             Get Started
           </button>

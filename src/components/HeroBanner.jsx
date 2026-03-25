@@ -46,9 +46,13 @@ export default function HeroBanner() {
       plugins={[
         Autoplay({
           delay: 5000,
-          stopOnInteraction: true,
+          stopOnInteraction: false,
         }),
       ]}
+      opts={{
+        loop: true,
+        duration: 80,
+      }}
       className="w-full"
       setApi={setApi}
     >

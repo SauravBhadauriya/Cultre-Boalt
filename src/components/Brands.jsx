@@ -27,14 +27,14 @@ export default function Brands() {
                 key={index}
                 className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
               >
-                <div className="flex flex-col items-center justify-center p-6 border border-slate-200 rounded-xl bg-white hover:shadow-lg hover:border-blue-300 transition-all duration-300 cursor-pointer group h-full">
+                <div className="flex flex-col items-center justify-center p-6 border border-slate-200 rounded-xl bg-white hover:shadow-lg hover:border-[var(--brand-blue)]/40 transition-all duration-300 cursor-pointer group h-full">
                   <img
                     src={partner.logo}
                     alt={partner.name}
                     className="h-16 md:h-20 object-contain mb-4 group-hover:scale-110 transition-transform duration-300"
                   />
                   <p className="text-xs md:text-sm font-semibold text-slate-900 text-center mb-2">{partner.name}</p>
-                  <p className="text-xs text-blue-600 font-medium text-center">{partner.tagline}</p>
+                  <p className="text-xs text-[var(--brand-blue)] font-medium text-center">{partner.tagline}</p>
                 </div>
               </CarouselItem>
             ))}

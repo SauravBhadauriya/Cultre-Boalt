@@ -109,7 +109,7 @@ export default function Footer() {
                   <a 
                     href={social.link}
                     aria-label={social.label}
-                    className="p-2 bg-slate-800 hover:bg-blue-600 rounded-full transition-colors cursor-pointer"
+                    className="p-2 bg-slate-800 hover:bg-[var(--brand-blue)] rounded-full transition-colors cursor-pointer"
                   >
                     <IconComponent className="w-5 h-5" />
                   </a>

@@ -80,7 +80,7 @@ export default function Career() {
         <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48 relative z-10 h-full flex flex-col justify-center">
           <button
             onClick={() => navigate(-1)}
-            className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors mb-8"
+            className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors mb-8 cursor-pointer"
           >
             <ArrowLeft className="w-5 h-5" />
             Back
@@ -151,7 +151,7 @@ export default function Career() {
                 onClick={() => setFilterDepartment(dept)}
                 className={`px-6 py-2 rounded-full font-semibold transition-all cursor-pointer ${
                   filterDepartment === dept
-                    ? 'bg-blue-600 text-white'
+                    ? 'bg-[var(--brand-blue)] text-white'
                     : 'bg-slate-200 text-slate-900 hover:bg-slate-300'
                 }`}
               >
@@ -175,7 +175,7 @@ export default function Career() {
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-slate-900 mb-2">{job.title}</h3>
                       <div className="flex flex-wrap gap-4 mb-4">
-                        <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+                        <span className="text-sm font-semibold text-[var(--brand-blue)] bg-[var(--brand-blue)]/10 px-3 py-1 rounded-full">
                           {job.department}
                         </span>
                         <span className="text-sm font-semibold text-slate-600">
@@ -197,7 +197,7 @@ export default function Career() {
                         </div>
                       </div>
                     </div>
-                    <div className="text-blue-600 flex-shrink-0">
+                    <div className="text-[var(--brand-blue)] flex-shrink-0">
                       {selectedJob?.id === job.id ? (
                         <ChevronUp className="w-6 h-6" />
                       ) : (
@@ -216,7 +216,7 @@ export default function Career() {
                         <ul className="space-y-2">
                           {job.responsibilities.map((resp, idx) => (
                             <li key={idx} className="flex gap-3 text-slate-700">
-                              <span className="text-blue-600 font-bold">•</span>
+                              <span className="text-[var(--brand-blue)] font-bold">•</span>
                               <span>{resp}</span>
                             </li>
                           ))}
@@ -227,7 +227,7 @@ export default function Career() {
                         <ul className="space-y-2">
                           {job.requirements.map((req, idx) => (
                             <li key={idx} className="flex gap-3 text-slate-700">
-                              <span className="text-blue-600 font-bold">•</span>
+                              <span className="text-[var(--brand-blue)] font-bold">•</span>
                               <span>{req}</span>
                             </li>
                           ))}
@@ -236,7 +236,7 @@ export default function Career() {
                     </div>
                     <button 
                       onClick={() => handleApplyClick(job)}
-                      className="mt-8 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors flex items-center gap-2 cursor-pointer"
+                      className="mt-8 bg-[var(--brand-blue)] hover:opacity-90 text-white font-bold py-3 px-8 rounded-lg transition-colors flex items-center gap-2 cursor-pointer"
                     >
                       <Mail className="w-5 h-5" />
                       Apply Now
@@ -301,7 +301,7 @@ export default function Career() {
                   className="w-full p-6 flex justify-between items-center hover:bg-slate-50 transition-colors cursor-pointer"
                 >
                   <h3 className="text-lg font-bold text-slate-900 text-left">{item.question}</h3>
-                  <div className="text-blue-600 flex-shrink-0">
+                  <div className="text-[var(--brand-blue)] flex-shrink-0">
                     {expandedFaq === item.id ? (
                       <ChevronUp className="w-6 h-6" />
                     ) : (
@@ -321,7 +321,7 @@ export default function Career() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-16 lg:py-20 px-4 bg-teal-700 text-white">
+      <section className="py-12 md:py-16 lg:py-20 px-4 bg-brand-teal text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Join Our Team?
@@ -331,7 +331,7 @@ export default function Career() {
           </p>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="bg-white text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-full transition-colors cursor-pointer"
+            className="bg-white text-[var(--brand-blue)] hover:bg-blue-50 font-bold py-3 px-8 rounded-full transition-colors cursor-pointer"
           >
             View All Positions
           </button>
@@ -448,7 +448,7 @@ export default function Career() {
                 <div className="flex gap-4">
                   <Button
                     type="submit"
-                    className="flex-1 bg-blue-600 hover:bg-blue-700 cursor-pointer"
+                    className="flex-1 bg-[var(--brand-blue)] hover:opacity-90 cursor-pointer"
                   >
                     Submit Application
                   </Button>

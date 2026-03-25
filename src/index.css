@@ -136,7 +136,7 @@
   /* Brand Colors */
   --brand-teal: #0f766e;        /* teal-700 - main bg for dark sections */
   --brand-teal-light: #0d9488;  /* teal-600 - cards on dark bg */
-  --brand-blue: #2563eb;        /* blue-600 - primary action */
+  --brand-blue: #2a4862;        /* blue-600 - primary action */
   --brand-fuchsia: #c026d3;     /* fuchsia-600 - accent/highlight */
   --brand-purple: #7c3aed;      /* purple-600 - gradient start */
 
@@ -200,4 +200,28 @@
 /* Back button used across pages */
 .back-btn {
   @apply flex items-center gap-2 text-slate-300 hover:text-white transition-colors mb-8 cursor-pointer;
+}
+
+/* Hide scrollbar but keep scroll functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth carousel transitions */
+[data-slot="carousel-content"] > div {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Page transition */
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.page-transition {
+  animation: pageFadeIn 0.35s ease forwards;
 }

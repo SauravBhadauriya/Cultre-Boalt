@@ -126,7 +126,7 @@ export default function Contact() {
               <div className="space-y-4">
                 {/* Address */}
                 <div className="flex gap-3">
-                  <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
+                  <MapPin className="w-5 h-5 text-[var(--brand-blue)] flex-shrink-0 mt-1" />
                   <div>
                     <p className="text-sm font-semibold text-slate-600 uppercase">Address</p>
                     <p className="text-slate-900 font-medium">{contactData.office.address}</p>
@@ -135,10 +135,10 @@ export default function Contact() {
 
                 {/* Phone */}
                 <div className="flex gap-3">
-                  <Phone className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
+                  <Phone className="w-5 h-5 text-[var(--brand-blue)] flex-shrink-0 mt-1" />
                   <div>
                     <p className="text-sm font-semibold text-slate-600 uppercase">Phone</p>
-                    <a href={`tel:${contactData.office.phone}`} className="text-slate-900 font-medium hover:text-blue-600 transition-colors">
+                    <a href={`tel:${contactData.office.phone}`} className="text-slate-900 font-medium hover:text-[var(--brand-blue)] transition-colors">
                       {contactData.office.phone}
                     </a>
                   </div>
@@ -146,10 +146,10 @@ export default function Contact() {
 
                 {/* Email */}
                 <div className="flex gap-3">
-                  <Mail className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
+                  <Mail className="w-5 h-5 text-[var(--brand-blue)] flex-shrink-0 mt-1" />
                   <div>
                     <p className="text-sm font-semibold text-slate-600 uppercase">Email</p>
-                    <a href={`mailto:${contactData.office.email}`} className="text-slate-900 font-medium hover:text-blue-600 transition-colors">
+                    <a href={`mailto:${contactData.office.email}`} className="text-slate-900 font-medium hover:text-[var(--brand-blue)] transition-colors">
                       {contactData.office.email}
                     </a>
                   </div>
@@ -157,7 +157,7 @@ export default function Contact() {
 
                 {/* Hours */}
                 <div className="flex gap-3">
-                  <div className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1">
+                  <div className="w-5 h-5 text-[var(--brand-blue)] flex-shrink-0 mt-1">
                     <svg fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00-.447.894l1.006.557a1 1 0 001.894-.894v-4z" clipRule="evenodd" />
                     </svg>
@@ -184,7 +184,7 @@ export default function Contact() {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 bg-white border-2 border-slate-200 rounded-full flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all duration-300"
+                      className="w-12 h-12 bg-white border-2 border-slate-200 rounded-full flex items-center justify-center hover:bg-[var(--brand-blue)] hover:border-[var(--brand-blue)] hover:text-white transition-all duration-300"
                       aria-label={social.name}
                     >
                       <IconComponent className="w-6 h-6" />
@@ -233,7 +233,7 @@ export default function Contact() {
                       placeholder={field.placeholder}
                       rows={field.rows}
                       required={field.required}
-                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all resize-none"
+                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-[var(--brand-blue)] focus:ring-2 focus:ring-[var(--brand-blue)]/10 transition-all resize-none"
                     />
                   ) : (
                     <input
@@ -244,7 +244,7 @@ export default function Contact() {
                       onChange={handleChange}
                       placeholder={field.placeholder}
                       required={field.required}
-                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all"
+                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-[var(--brand-blue)] focus:ring-2 focus:ring-[var(--brand-blue)]/10 transition-all"
                     />
                   )}
                 </div>
@@ -254,7 +254,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 uppercase tracking-wide"
+                className="w-full bg-[var(--brand-blue)] hover:opacity-90 disabled:bg-slate-400 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 uppercase tracking-wide"
               >
                 {loading ? 'Submitting...' : 'Submit'}
               </button>
@@ -268,15 +268,15 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">24/7</div>
+              <div className="text-4xl font-bold text-[var(--brand-blue)] mb-2">24/7</div>
               <p className="text-slate-600">Email Support Available</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">2-4 hrs</div>
+              <div className="text-4xl font-bold text-[var(--brand-blue)] mb-2">2-4 hrs</div>
               <p className="text-slate-600">Average Response Time</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">100%</div>
+              <div className="text-4xl font-bold text-[var(--brand-blue)] mb-2">100%</div>
               <p className="text-slate-600">Client Satisfaction</p>
             </div>
           </div>

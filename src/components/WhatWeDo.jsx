@@ -42,11 +42,11 @@ export default function WhatWeDo() {
             return (
               <Card
                 key={index}
-                className="hover:shadow-lg transition-all duration-300 hover:border-blue-200 border-slate-200"
+                className="hover:shadow-lg transition-all duration-300 hover:border-[var(--brand-blue)]/30 border-slate-200"
               >
                 <CardHeader>
-                  <div className="mb-4 p-3 bg-blue-100 rounded-lg w-fit">
-                    <IconComponent className="w-6 h-6 text-blue-600" />
+                  <div className="mb-4 p-3 bg-[var(--brand-blue)]/10 rounded-lg w-fit">
+                    <IconComponent className="w-6 h-6 text-[var(--brand-blue)]" />
                   </div>
                   <CardTitle className="text-xl md:text-2xl text-slate-900">
                     {service.title}

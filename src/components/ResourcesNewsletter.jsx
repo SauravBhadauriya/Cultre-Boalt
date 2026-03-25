@@ -38,13 +38,13 @@ export default function ResourcesNewsletter() {
   const displayedResources = resourcesData.downloadSection.resources.slice(0, displayedCount)
 
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-10 md:px-20   lg:pl-40 ">
+    <section className="section-base bg-white">
+      <div className="container-base">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
           {/* Left Side - Download Resources */}
           <Card className="lg:col-span-2 bg-white border border-slate-200 rounded-xl">
             <CardHeader className="pb-4">
-              <CardTitle className="text-2xl md:text-3xl font-bold text-fuchsia-600 mb-2">
+              <CardTitle className="text-2xl md:text-3xl font-bold text-[var(--brand-blue)] mb-2">
                 {resourcesData.downloadSection.title}
               </CardTitle>
               <CardDescription className="text-sm md:text-base text-slate-600 mt-2">
@@ -56,7 +56,7 @@ export default function ResourcesNewsletter() {
               <div className="flex gap-3 flex-wrap">
                 {resourcesData.downloadSection.steps.map((step) => (
                   <div key={step.number} className="flex items-center gap-2">
-                    <div className="w-7 h-7 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-xs">
+      <div className="w-7 h-7 rounded-full bg-[var(--brand-blue)] text-white flex items-center justify-center font-bold text-xs">
                       {step.number}
                     </div>
                     <span className="text-slate-700 text-xs md:text-sm font-medium">{step.label}</span>
@@ -112,7 +112,7 @@ export default function ResourcesNewsletter() {
                 <div className="flex justify-center pt-4">
                   <Button
                     onClick={handleDownload}
-                    className="bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white font-semibold cursor-pointer px-8 py-2 rounded-lg flex items-center gap-2"
+                    className="bg-[var(--brand-blue)] text-white font-semibold cursor-pointer px-8 py-2 rounded-lg flex items-center gap-2"
                   >
                     <Download className="w-4 h-4" />
                     Download
@@ -123,12 +123,12 @@ export default function ResourcesNewsletter() {
           </Card>
 
           {/* Right Side - Newsletter */}
-          <Card className="bg-gradient-to-br from-purple-600 via-purple-700 to-teal-600 border-0 rounded-2xl shadow-lg">
+          <Card className="bg-brand-teal border-0 rounded-2xl shadow-lg">
             <CardHeader className="pb-4">
               <CardTitle className="text-2xl  md:text-3xl text-white leading-tight">
                 {resourcesData.newsletterSection.title}
               </CardTitle>
-              <CardDescription className="text-purple-100 text-sm md:text-base mt-2">
+              <CardDescription className="text-teal-100 text-sm md:text-base mt-2">
                 {resourcesData.newsletterSection.subtitle}
               </CardDescription>
             </CardHeader>
@@ -138,7 +138,7 @@ export default function ResourcesNewsletter() {
                 {resourcesData.newsletterSection.benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <span className="text-lg flex-shrink-0">{benefit.icon}</span>
-                    <span className="text-purple-100 text-xs md:text-sm leading-relaxed">{benefit.text}</span>
+                    <span className="text-teal-100 text-xs md:text-sm leading-relaxed">{benefit.text}</span>
                   </div>
                 ))}
               </div>
@@ -154,7 +154,7 @@ export default function ResourcesNewsletter() {
                 />
                 <Button
                   onClick={handleSubscribe}
-                  className="w-full bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white font-semibold cursor-pointer h-10 text-sm rounded-lg"
+                  className="w-full bg-[var(--brand-blue)] hover:opacity-90 text-white font-semibold cursor-pointer h-10 text-sm rounded-lg"
                 >
                   {resourcesData.newsletterSection.buttonText} 🔔
                 </Button>

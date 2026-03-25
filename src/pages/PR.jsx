@@ -64,7 +64,7 @@ export default function PR() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {prData.stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-[var(--brand-blue)] mb-2">
                   {stat.value}
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-1">{stat.label}</h3>
@@ -84,7 +84,7 @@ export default function PR() {
               onClick={() => setActiveTab('campaigns')}
               className={`px-6 py-3 font-semibold transition-colors ${
                 activeTab === 'campaigns'
-                  ? 'text-blue-600 border-b-2 border-blue-600'
+                  ? 'text-[var(--brand-blue)] border-b-2 border-[var(--brand-blue)]'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
@@ -94,7 +94,7 @@ export default function PR() {
               onClick={() => setActiveTab('portfolio')}
               className={`px-6 py-3 font-semibold transition-colors ${
                 activeTab === 'portfolio'
-                  ? 'text-blue-600 border-b-2 border-blue-600'
+                  ? 'text-[var(--brand-blue)] border-b-2 border-[var(--brand-blue)]'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
@@ -121,7 +121,7 @@ export default function PR() {
                         alt={campaign.title}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                       />
-                      <div className="absolute top-3 right-3 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                      <div className="absolute top-3 right-3 bg-[var(--brand-blue)] text-white text-xs font-semibold px-3 py-1 rounded-full">
                         {campaign.category}
                       </div>
                     </div>
@@ -151,7 +151,7 @@ export default function PR() {
                     onClick={() => setSelectedCategory('all')}
                     className={`px-6 py-2 rounded-full font-semibold transition-all ${
                       selectedCategory === 'all'
-                        ? 'bg-blue-600 text-white'
+                        ? 'bg-[var(--brand-blue)] text-white'
                         : 'bg-slate-200 text-slate-700 hover:bg-slate-300'
                     }`}
                   >
@@ -163,7 +163,7 @@ export default function PR() {
                       onClick={() => setSelectedCategory(category.id)}
                       className={`px-6 py-2 rounded-full font-semibold transition-all ${
                         selectedCategory === category.id
-                          ? 'bg-blue-600 text-white'
+                          ? 'bg-[var(--brand-blue)] text-white'
                           : 'bg-slate-200 text-slate-700 hover:bg-slate-300'
                       }`}
                     >
@@ -212,7 +212,7 @@ export default function PR() {
               >
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{partner.name}</h3>
                 <p className="text-sm text-slate-600 mb-2">{partner.type}</p>
-                <p className="text-blue-600 font-semibold">{partner.reach}</p>
+                <p className="text-[var(--brand-blue)] font-semibold">{partner.reach}</p>
               </div>
             ))}
           </div>
@@ -241,7 +241,7 @@ export default function PR() {
                 <div className="p-6">
                   <h3 className="text-lg font-bold text-slate-900 mb-1">{influencer.name}</h3>
                   <p className="text-sm text-slate-600 mb-3">{influencer.category}</p>
-                  <p className="text-blue-600 font-semibold">{influencer.followers} Followers</p>
+                  <p className="text-[var(--brand-blue)] font-semibold">{influencer.followers} Followers</p>
                 </div>
               </div>
             ))}
@@ -289,14 +289,14 @@ export default function PR() {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
           <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             {/* Modal Header */}
-            <div className="sticky top-0 bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6 flex justify-between items-center">
+            <div className="sticky top-0 bg-[var(--brand-blue)] text-white p-6 flex justify-between items-center">
               <div>
                 <h2 className="text-2xl font-bold">{selectedCampaign.title}</h2>
                 <p className="text-blue-100 text-sm mt-1">{selectedCampaign.year}</p>
               </div>
               <button
                 onClick={() => setSelectedCampaign(null)}
-                className="p-2 hover:bg-blue-500 rounded-full transition-colors"
+                className="p-2 hover:bg-white/20 rounded-full transition-colors"
               >
                 <X className="w-6 h-6" />
               </button>
@@ -342,13 +342,13 @@ export default function PR() {
                     <h3 className="text-sm font-semibold text-slate-600 uppercase tracking-wide mb-2">
                       Media Coverage
                     </h3>
-                    <p className="text-lg text-blue-600 font-semibold">{selectedCampaign.coverage}</p>
+                    <p className="text-lg text-[var(--brand-blue)] font-semibold">{selectedCampaign.coverage}</p>
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-slate-600 uppercase tracking-wide mb-2">
                       Total Reach
                     </h3>
-                    <p className="text-lg text-blue-600 font-semibold">{selectedCampaign.reach}</p>
+                    <p className="text-lg text-[var(--brand-blue)] font-semibold">{selectedCampaign.reach}</p>
                   </div>
                 </div>
               </div>
@@ -356,7 +356,7 @@ export default function PR() {
               {/* Close Button */}
               <button
                 onClick={() => setSelectedCampaign(null)}
-                className="w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                className="w-full mt-6 bg-[var(--brand-blue)] hover:opacity-90 text-white font-bold py-3 px-6 rounded-lg transition-colors"
               >
                 Close
               </button>
