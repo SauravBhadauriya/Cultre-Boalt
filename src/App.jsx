@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import HeroBanner from './components/HeroBanner'
@@ -10,6 +10,8 @@ import AboutUsSection from './components/AboutUsSection'
 import BusinessVerticals from './components/BusinessVerticals'
 import NewsEvents from './components/NewsEvents'
 import ResourcesNewsletter from './components/ResourcesNewsletter'
+import ProminentCustomers from './components/ProminentCustomers'
+import Testimonials from './components/Testimonials'
 import Contact from './pages/Contact'
 import Design from './pages/Design'
 import PR from './pages/PR'
@@ -18,13 +20,10 @@ import Social from './pages/Social'
 import Career from './pages/Career'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 
-import ProminentCustomers from './components/ProminentCustomers'
-import Testimonials from './components/Testimonials'
-
-function HomePage({ onNavigate }) {
+function HomePage() {
   return (
     <>
-      <HeroBanner onNavigate={onNavigate} />
+      <HeroBanner />
       <Brands />
       <AboutUsSection />
       <BusinessVerticals />
@@ -33,56 +32,37 @@ function HomePage({ onNavigate }) {
       <ResourcesNewsletter />
       <ProminentCustomers />
       <Testimonials />
-      <CTASection onNavigate={onNavigate} />
+      <CTASection />
     </>
   )
 }
 
-function App() {
-  const [currentPage, setCurrentPage] = useState('home')
-
-  // Update URL when page changes
-  const handleNavigate = (page) => {
-    setCurrentPage(page)
-    window.location.hash = page === 'home' ? '' : `#${page}`
-  }
-
-  // Read URL on mount and when hash changes
-  useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.slice(1) || 'home'
-      setCurrentPage(hash)
-    }
-
-    // Set initial page from URL
-    handleHashChange()
-
-    // Listen for hash changes
-    window.addEventListener('hashchange', handleHashChange)
-    return () => window.removeEventListener('hashchange', handleHashChange)
-  }, [])
-
-  const handleBack = () => {
-    handleNavigate('home')
-  }
-
+function Layout({ children }) {
   return (
     <div className="min-h-screen bg-white flex flex-col">
-      <Header onNavigate={handleNavigate} />
-      <main className="flex-grow">
-        {currentPage === 'home' && <HomePage onNavigate={handleNavigate} />}
-        {currentPage === 'contact' && <Contact onBack={handleBack} />}
-        {currentPage === 'design' && <Design onBack={handleBack} />}
-        {currentPage === 'PR' && <PR onBack={handleBack} />}
-        {currentPage === 'about' && <About onBack={handleBack} />}
-        {currentPage === 'why-us' && <WhyChooseUs onBack={handleBack} />}
-        {currentPage === 'social' && <Social onBack={handleBack} />}
-        {currentPage === 'career' && <Career onBack={handleBack} />}
-        {currentPage === 'privacy-policy' && <PrivacyPolicy onBack={handleBack} />}
-      </main>
-      <Footer onNavigate={handleNavigate} />
+      <Header />
+      <main className="flex-grow">{children}</main>
+      <Footer />
     </div>
   )
 }
 
-export default App
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/design" element={<Design />} />
+          <Route path="/pr" element={<PR />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/why-us" element={<WhyChooseUs />} />
+          <Route path="/social" element={<Social />} />
+          <Route path="/career" element={<Career />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
+  )
+}

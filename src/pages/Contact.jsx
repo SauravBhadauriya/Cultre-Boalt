@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { contactData } from '@/data/contactData'
 import { Share2, Heart, Zap, Mail, Phone, MapPin, ArrowLeft } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -9,7 +10,7 @@ const iconMap = {
   Zap: Zap
 }
 
-export default function Contact({ onBack }) {
+export default function Contact() {
   const [formData, setFormData] = useState({
     email: '',
     name: '',
@@ -75,7 +76,7 @@ export default function Contact({ onBack }) {
       <div className="bg-gradient-to-r from-slate-800 to-slate-900 text-white py-12 md:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4">
           <button
-            onClick={onBack}
+            onClick={() => navigate(-1)}
             className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors mb-4"
           >
             <ArrowLeft className="w-5 h-5" />
@@ -282,3 +283,5 @@ export default function Contact({ onBack }) {
     </div>
   )
 }
+
+

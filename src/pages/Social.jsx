@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { socialData } from '@/data/socialData'
 import { ArrowLeft, CheckCircle } from 'lucide-react'
 
-export default function Social({ onBack }) {
+export default function Social() {
   const [selectedCampaign, setSelectedCampaign] = useState(null)
 
   return (
@@ -11,7 +12,7 @@ export default function Social({ onBack }) {
       <div className="bg-slate-900 text-white py-16 md:py-20 lg:py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <button
-            onClick={onBack}
+            onClick={() => navigate(-1)}
             className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors mb-8"
           >
             <ArrowLeft className="w-5 h-5" />
@@ -302,7 +303,7 @@ export default function Social({ onBack }) {
             Let's create a social media strategy that drives real results for your brand.
           </p>
           <button
-            onClick={onBack}
+            onClick={() => navigate(-1)}
             className="bg-white text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-full transition-colors"
           >
             Get Started
@@ -312,3 +313,5 @@ export default function Social({ onBack }) {
     </div>
   )
 }
+
+

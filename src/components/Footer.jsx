@@ -1,33 +1,34 @@
-import React from 'react'
-import { Share2, Heart, Zap, Mail, Phone, MapPin } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
+import { Share2, Heart, Zap, Mail, Phone } from 'lucide-react'
 
-export default function Footer({ onNavigate }) {
+export default function Footer() {
+  const navigate = useNavigate()
   const currentYear = new Date().getFullYear()
 
   const footerData = [
     {
       title: "Services",
       links: [
-        { name: "Brand Design", link: "#design", action: () => onNavigate('design') },
-        { name: "PR & Communications", link: "#pr", action: () => onNavigate('PR') },
-        { name: "Social Media", link: "#social", action: () => onNavigate('social') }
+        { name: "Brand Design", path: "/design" },
+        { name: "PR & Communications", path: "/pr" },
+        { name: "Social Media", path: "/social" },
       ]
     },
     {
       title: "Company",
       links: [
-        { name: "About Us", link: "#about", action: () => onNavigate('about') },
-        { name: "Contact", link: "#contact", action: () => onNavigate('contact') },
-        { name: "Privacy Policy", link: "#privacy-policy", action: () => onNavigate('privacy-policy') },
-        { name: "Career", link: "#career", action: () => onNavigate('career')}
+        { name: "About Us", path: "/about" },
+        { name: "Contact", path: "/contact" },
+        { name: "Privacy Policy", path: "/privacy-policy" },
+        { name: "Career", path: "/career" },
       ]
     },
     {
       title: "Connect",
       links: [
-        { name: "Facebook", link: "#", action: null },
-        { name: "Instagram", link: "#", action: null },
-        { name: "LinkedIn", link: "#", action: null }
+        { name: "Facebook", path: null },
+        { name: "Instagram", path: null },
+        { name: "LinkedIn", path: null },
       ]
     }
   ]
@@ -77,8 +78,8 @@ export default function Footer({ onNavigate }) {
                 <ul className="space-y-2">
                   {section.links.map((item, i) => (
                     <li key={i}>
-                      <button 
-                        onClick={() => item.action && item.action()}
+                      <button
+                        onClick={() => item.path && navigate(item.path)}
                         className="text-slate-400 hover:text-white transition-colors text-sm md:text-base cursor-pointer text-left"
                       >
                         {item.name}

@@ -1,16 +1,17 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import { Button } from '../components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card'
 
-export default function PrivacyPolicy({ onBack }) {
+export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-white">
       {/* Dark Header Section */}
       <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 md:px-8">
           <Button
-            onClick={onBack}
+            onClick={() => navigate(-1)}
             variant="ghost"
             className="flex items-center gap-2 mb-6 text-white hover:text-blue-400 hover:bg-transparent transition-colors cursor-pointer"
           >
@@ -248,3 +249,5 @@ export default function PrivacyPolicy({ onBack }) {
     </div>
   )
 }
+
+

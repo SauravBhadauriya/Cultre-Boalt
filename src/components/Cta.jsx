@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Button } from "@/components/ui/button"
 import { Mail, ArrowRight } from "lucide-react"
+import { useState } from 'react'
 import ContactModal from './ContactModal'
 
-export default function CTASection({ onNavigate }) {
+export default function CTASection() {
+  const navigate = useNavigate()
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
@@ -35,7 +37,7 @@ export default function CTASection({ onNavigate }) {
             </Button>
             
             <Button 
-              onClick={() => onNavigate && onNavigate('design')}
+              onClick={() => navigate('/design')}
               className="border-2 border-white text-white hover:bg-white/10 font-bold text-base md:text-lg px-6 md:px-8 py-6 rounded-full w-full sm:w-auto bg-transparent cursor-pointer"
             >
               <ArrowRight className="mr-2 h-5 w-5" />

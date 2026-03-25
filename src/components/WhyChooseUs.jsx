@@ -1,7 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { CheckCircle, ArrowLeft } from 'lucide-react'
 
-export default function WhyChooseUs({ onBack }) {
+export default function WhyChooseUs() {
   const benefits = [
     {
       title: "Strategic Approach",
@@ -36,7 +37,7 @@ export default function WhyChooseUs({ onBack }) {
         <div className="max-w-6xl mx-auto">
           {onBack && (
             <button
-              onClick={onBack}
+              onClick={() => navigate(-1)}
               className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors mb-8"
             >
               <ArrowLeft className="w-5 h-5" />
@@ -89,3 +90,4 @@ export default function WhyChooseUs({ onBack }) {
     </div>
   )
 }
+

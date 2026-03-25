@@ -1,15 +1,17 @@
 import React from 'react'
 import { aboutData } from '@/data/aboutData'
+import { useNavigate } from 'react-router-dom'
 import { ArrowLeft, CheckCircle } from 'lucide-react'
 
-export default function About({ onBack }) {
+export default function About() {
+  const navigate = useNavigate()
   return (
     <div className="min-h-screen bg-white">
       {/* Dark Header Section */}
       <div className="bg-slate-900 text-white py-16 md:py-20 lg:py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <button
-            onClick={onBack}
+            onClick={() => navigate(-1)}
             className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors mb-8"
           >
             <ArrowLeft className="w-5 h-5" />
@@ -337,7 +339,7 @@ export default function About({ onBack }) {
             Let's create something amazing together. Get in touch with our team today.
           </p>
           <button
-            onClick={onBack}
+            onClick={() => navigate(-1)}
             className="bg-white text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-full transition-colors"
           >
             Get Started
