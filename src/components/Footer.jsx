@@ -113,7 +113,7 @@ export default function Footer() {
           </p>
 
           {/* Social Links */}
-          <ul className="flex gap-4">
+          <ul className="flex gap-6">
             {socialLinks.map((social, index) => {
               const IconComponent = social.icon
               return (
@@ -121,9 +121,9 @@ export default function Footer() {
                   <a 
                     href={social.link}
                     aria-label={social.label}
-                    className="p-2 bg-slate-800 hover:bg-[var(--brand-blue)] rounded-full transition-colors cursor-pointer"
+                    className="text-slate-400 hover:text-[var(--brand-blue)] transition-all duration-300 cursor-pointer"
                   >
-                    <IconComponent className="w-5 h-5" />
+                    <IconComponent className="w-6 h-6 hover:fill-[var(--brand-blue)]" />
                   </a>
                 </li>
               )

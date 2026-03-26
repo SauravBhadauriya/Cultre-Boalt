@@ -80,17 +80,17 @@ export default function HeroBanner() {
                     </span>
                   </p>
 
-                  <div className="mt-4 sm:mt-5 md:mt-6 flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 justify-center">
+                  <div className="mt-4 sm:mt-5 md:mt-6 flex flex-col sm:flex-row gap-1.5 sm:gap-2 md:gap-3 justify-center">
                     <button 
                       onClick={() => navigate('/contact')}
-                      className="bg-white text-black px-3 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg font-semibold text-xs sm:text-sm md:text-base hover:bg-gray-100 transition-colors cursor-pointer w-auto min-h-[36px] sm:min-h-[40px] flex items-center justify-center whitespace-nowrap"
+                      className="bg-white text-black px-2.5 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-2.5 rounded-lg font-semibold text-xs sm:text-sm md:text-base hover:bg-gray-100 transition-colors cursor-pointer w-auto min-h-[32px] sm:min-h-[36px] flex items-center justify-center whitespace-nowrap"
                     >
                       Get Started
                     </button>
 
                     <button 
                       onClick={() => navigate('/design')}
-                      className="border border-white text-white px-3 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg font-semibold text-xs sm:text-sm md:text-base hover:bg-white/10 transition-colors cursor-pointer w-auto min-h-[36px] sm:min-h-[40px] flex items-center justify-center whitespace-nowrap"
+                      className="border border-white text-white px-2.5 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-2.5 rounded-lg font-semibold text-xs sm:text-sm md:text-base hover:bg-white/10 transition-colors cursor-pointer w-auto min-h-[32px] sm:min-h-[36px] flex items-center justify-center whitespace-nowrap"
                     >
                       View Work
                     </button>
