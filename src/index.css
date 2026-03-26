@@ -234,3 +234,25 @@
 .animate-progress {
   animation: progress 5s linear forwards;
 }
+
+/* Typewriter animation */
+@keyframes typing {
+  from { width: 0 }
+  to   { width: 100% }
+}
+@keyframes blink {
+  0%, 100% { opacity: 0 }
+  50%       { opacity: 1 }
+}
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 3s steps(52, end) 1s forwards;
+}
+.typewriter::after {
+  content: '...';
+  font-size: 1em;
+  animation: blink 0.75s step-end infinite;
+}

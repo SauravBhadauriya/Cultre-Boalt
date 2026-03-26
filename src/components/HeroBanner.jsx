@@ -75,7 +75,9 @@ export default function HeroBanner() {
                   </h1>
 
                   <p className="mt-4 text-base md:text-lg text-gray-200">
-                    Creative branding, design & digital experiences that make impact.
+                    <span className="typewriter">
+                      Creative branding, design & digital experiences that make impact.
+                    </span>
                   </p>
 
                   <div className="mt-6 flex flex-col sm:flex-row gap-4">

@@ -22,9 +22,7 @@ export default function About() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             About Cultre Boat
           </h1>
-          <p className="text-slate-300 text-base md:text-lg max-w-2xl">
-            Let's discuss your project and how we can help your business grow
-          </p>
+          <p className="text-slate-300 text-base md:text-lg max-w-2xl">`n            <span className="typewriter">Let's discuss your project and how we can help your business grow</span>`n          </p>
         </div>
       </div>
 
@@ -68,9 +66,9 @@ export default function About() {
             </div>
 
             {/* Right Side - Image */}
-            <div className="h-96 bg-[var(--brand-blue)] rounded-lg overflow-hidden">
+            <div className="h-96 rounded-xl overflow-hidden shadow-lg">
               <img
-                src={aboutData.team[0].image}
+                src="/images/Blog/Blog2.jpg"
                 alt="Company"
                 className="w-full h-full object-cover"
               />
@@ -121,6 +119,33 @@ export default function About() {
                 <div className="text-4xl mb-4">{value.icon}</div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{value.title}</h3>
                 <p className="text-slate-600 leading-relaxed">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-12 md:py-16 lg:py-20 px-4 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
+            Our Creative World
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {[
+              { src: "/images/Blog/Blog1.jpg", span: "row-span-2" },
+              { src: "/images/Blog/Blog3.jpg", span: "" },
+              { src: "/images/Blog/Blog4.jpg", span: "" },
+              { src: "/images/Blog/Blog5.jpg", span: "col-span-2" },
+              { src: "/images/Blog/Blog6.jpg", span: "" },
+              { src: "/images/Blog/Blog7.jpg", span: "" },
+            ].map((img, i) => (
+              <div key={i} className={`${img.span} group relative overflow-hidden rounded-xl aspect-square shadow-sm hover:shadow-lg transition-all duration-300`}>
+                <img
+                  src={img.src}
+                  alt={`Gallery ${i + 1}`}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
             ))}
           </div>
@@ -332,20 +357,20 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-16 lg:py-20 px-4 bg-brand-teal text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Work With Us?
-          </h2>
-          <p className="text-blue-100 text-lg mb-8">
-            Let's create something amazing together. Get in touch with our team today.
-          </p>
-          <button
-            onClick={() => navigate(-1)}
-            className="bg-white text-[var(--brand-blue)] hover:bg-blue-50 font-bold py-3 px-8 rounded-full transition-colors"
-          >
-            Get Started
-          </button>
+      <section className="relative overflow-hidden">
+        <div className="grid grid-cols-3 h-48 md:h-64">
+          <img src="/images/Blog/Blog1.jpg" alt="" className="w-full h-full object-cover" />
+          <img src="/images/Blog/Blog3.jpg" alt="" className="w-full h-full object-cover" />
+          <img src="/images/Blog/Blog5.jpg" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-[var(--brand-teal)]/80 flex items-center justify-center">
+          <div className="text-center text-white px-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Work With Us?</h2>
+            <p className="text-teal-100 text-lg mb-8">Let's create something amazing together. Get in touch with our team today.</p>
+            <button onClick={() => navigate('/contact')} className="bg-white text-[var(--brand-blue)] hover:bg-blue-50 font-bold py-3 px-8 rounded-full transition-colors cursor-pointer">
+              Get Started
+            </button>
+          </div>
         </div>
       </section>
     </div>

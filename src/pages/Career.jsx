@@ -88,9 +88,7 @@ export default function Career() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             {careerData.overview.title}
           </h1>
-          <p className="text-slate-300 text-base md:text-lg max-w-2xl">
-            {careerData.overview.description}
-          </p>
+          <p className="text-slate-300 text-base md:text-lg max-w-2xl">`n           <span className="typewriter">{careerData.overview.description}</span>`n          </p>
         </div>
       </div>
 
@@ -321,20 +319,20 @@ export default function Career() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-16 lg:py-20 px-4 bg-brand-teal text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Join Our Team?
-          </h2>
-          <p className="text-blue-100 text-lg mb-8">
-            Explore open positions and start your journey with Cultre Boat today.
-          </p>
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="bg-white text-[var(--brand-blue)] hover:bg-blue-50 font-bold py-3 px-8 rounded-full transition-colors cursor-pointer"
-          >
-            View All Positions
-          </button>
+      <section className="relative overflow-hidden">
+        <div className="grid grid-cols-3 h-48 md:h-64">
+          <img src="/images/Blog/Blog2.jpg" alt="" className="w-full h-full object-cover" />
+          <img src="/images/Blog/Blog4.jpg" alt="" className="w-full h-full object-cover" />
+          <img src="/images/Blog/Blog6.jpg" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-[var(--brand-teal)]/80 flex items-center justify-center">
+          <div className="text-center text-white px-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Join Our Team?</h2>
+            <p className="text-teal-100 text-lg mb-8">Explore open positions and start your journey with Cultre Boat today.</p>
+            <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="bg-white text-[var(--brand-blue)] hover:bg-blue-50 font-bold py-3 px-8 rounded-full transition-colors cursor-pointer">
+              View All Positions
+            </button>
+          </div>
         </div>
       </section>
 

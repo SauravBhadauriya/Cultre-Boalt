@@ -87,9 +87,7 @@ export default function Contact() {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Get In Touch
           </h1>
-          <p className="text-slate-300 text-lg">
-            Let's discuss your project and how we can help your business grow
-          </p>
+          <p className="text-slate-300 text-lg">`n            <span className="typewriter">Let's discuss your project and how we can help your business grow</span>`n          </p>
         </div>
       </div>
 
@@ -98,6 +96,19 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left Side - Contact Info */}
           <div className="space-y-8">
+            {/* Image collage */}
+            <div className="grid grid-cols-2 gap-3 h-56">
+              <div className="row-span-2 rounded-2xl overflow-hidden shadow-md">
+                <img src="/images/Blog/Blog1.jpg" alt="" className="w-full h-full object-cover" />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-md">
+                <img src="/images/Blog/Blog3.jpg" alt="" className="w-full h-full object-cover" />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-md">
+                <img src="/images/Blog/Blog5.jpg" alt="" className="w-full h-full object-cover" />
+              </div>
+            </div>
+
             {/* Heading */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">
@@ -263,21 +274,28 @@ export default function Contact() {
         </div>
       </div>
 
-      {/* Additional Info Section */}
-      <div className="bg-slate-50 py-12 md:py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[var(--brand-blue)] mb-2">24/7</div>
-              <p className="text-slate-600">Email Support Available</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[var(--brand-blue)] mb-2">2-4 hrs</div>
-              <p className="text-slate-600">Average Response Time</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[var(--brand-blue)] mb-2">100%</div>
-              <p className="text-slate-600">Client Satisfaction</p>
+      {/* Image Banner + Stats */}
+      <div className="relative">
+        <div className="grid grid-cols-3 h-48 md:h-64 overflow-hidden">
+          <img src="/images/Blog/Blog2.jpg" alt="" className="w-full h-full object-cover" />
+          <img src="/images/Blog/Blog4.jpg" alt="" className="w-full h-full object-cover" />
+          <img src="/images/Blog/Blog6.jpg" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-[var(--brand-teal)]/80 flex items-center">
+          <div className="max-w-7xl mx-auto px-4 w-full">
+            <div className="grid grid-cols-3 gap-8 text-center">
+              <div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-1">24/7</div>
+                <p className="text-teal-100 text-sm">Email Support Available</p>
+              </div>
+              <div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-1">2-4 hrs</div>
+                <p className="text-teal-100 text-sm">Average Response Time</p>
+              </div>
+              <div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-1">100%</div>
+                <p className="text-teal-100 text-sm">Client Satisfaction</p>
+              </div>
             </div>
           </div>
         </div>

@@ -3,6 +3,13 @@ import { useNavigate } from 'react-router-dom'
 import { socialData } from '@/data/socialData'
 import { ArrowLeft, CheckCircle } from 'lucide-react'
 
+const campaignImages = [
+  "/images/Blog/Blog3.jpg",
+  "/images/Blog/Blog4.jpg",
+  "/images/Blog/Blog5.jpg",
+  "/images/Blog/Blog6.jpg",
+]
+
 export default function Social() {
   const navigate = useNavigate()
   const [selectedCampaign, setSelectedCampaign] = useState(null)
@@ -24,9 +31,7 @@ export default function Social() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             {socialData.overview.title}
           </h1>
-          <p className="text-slate-300 text-base md:text-lg max-w-2xl">
-            {socialData.overview.description}
-          </p>
+          <p className="text-slate-300 text-base md:text-lg max-w-2xl">`n           <span className="typewriter">{socialData.overview.description}</span>`n          </p>
         </div>
       </div>
 
@@ -95,6 +100,40 @@ export default function Social() {
         </div>
       </section>
 
+      {/* Image Showcase Section */}
+      <section className="section-base bg-white">
+        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
+          <div className="text-center mb-12">
+            <p className="section-label">Our Work</p>
+            <h2 className="section-heading">Social Media in Action</h2>
+            <p className="text-slate-600 mt-3 max-w-xl mx-auto">A glimpse of the creative content and campaigns we've delivered for our clients.</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {[
+              { src: "/images/Blog/Blog1.jpg", label: "Fashion Campaign" },
+              { src: "/images/Blog/Blog2.jpg", label: "Bridal Content" },
+              { src: "/images/Blog/Blog3.jpg", label: "Trend Styling" },
+              { src: "/images/Blog/Blog4.jpg", label: "Brand Story" },
+              { src: "/images/Blog/Blog5.jpg", label: "Product Launch" },
+              { src: "/images/Blog/Blog6.jpg", label: "Influencer Collab" },
+              { src: "/images/Blog/Blog7.jpg", label: "Reel Content" },
+              { src: "/images/Blog/Blog1.jpg", label: "Community Post" },
+            ].map((img, i) => (
+              <div key={i} className="group relative overflow-hidden rounded-xl aspect-square shadow-sm hover:shadow-lg transition-all duration-300">
+                <img
+                  src={img.src}
+                  alt={img.label}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                  <span className="text-white text-xs font-semibold">{img.label}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Campaigns Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4 bg-slate-50">
         <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
@@ -102,27 +141,33 @@ export default function Social() {
             Featured Campaigns
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {socialData.campaigns.map(campaign => (
+            {socialData.campaigns.map((campaign, i) => (
               <div
                 key={campaign.id}
                 onClick={() => setSelectedCampaign(campaign)}
-                className="bg-white p-8 rounded-lg border border-slate-200 hover:shadow-lg transition-all cursor-pointer"
+                className="bg-white rounded-xl border border-slate-200 hover:shadow-lg transition-all cursor-pointer overflow-hidden group"
               >
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{campaign.title}</h3>
-                <p className="text-[var(--brand-blue)] font-semibold mb-2">{campaign.platform}</p>
-                <p className="text-slate-600 mb-4">{campaign.description}</p>
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <p className="text-sm font-semibold text-slate-600 uppercase tracking-wide mb-1">
-                      Reach
-                    </p>
-                    <p className="text-2xl font-bold text-slate-900">{campaign.reach}</p>
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-slate-600 uppercase tracking-wide mb-1">
-                      Engagement
-                    </p>
-                    <p className="text-2xl font-bold text-slate-900">{campaign.engagement}</p>
+                {/* Campaign Image */}
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src={campaignImages[i % campaignImages.length]}
+                    alt={campaign.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">{campaign.title}</h3>
+                  <p className="text-[var(--brand-blue)] font-semibold mb-2">{campaign.platform}</p>
+                  <p className="text-slate-600 mb-4 text-sm">{campaign.description}</p>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Reach</p>
+                      <p className="text-2xl font-bold text-slate-900">{campaign.reach}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">Engagement</p>
+                      <p className="text-2xl font-bold text-slate-900">{campaign.engagement}</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -297,20 +342,20 @@ export default function Social() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-16 lg:py-20 px-4 bg-brand-teal text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Grow Your Social Media?
-          </h2>
-          <p className="text-blue-100 text-lg mb-8">
-            Let's create a social media strategy that drives real results for your brand.
-          </p>
-          <button
-            onClick={() => navigate(-1)}
-            className="bg-white text-[var(--brand-blue)] hover:bg-blue-50 font-bold py-3 px-8 rounded-full transition-colors"
-          >
-            Get Started
-          </button>
+      <section className="relative overflow-hidden">
+        <div className="grid grid-cols-3 h-48 md:h-64">
+          <img src="/images/Blog/Blog3.jpg" alt="" className="w-full h-full object-cover" />
+          <img src="/images/Blog/Blog5.jpg" alt="" className="w-full h-full object-cover" />
+          <img src="/images/Blog/Blog7.jpg" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-[var(--brand-teal)]/80 flex items-center justify-center">
+          <div className="text-center text-white px-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Grow Your Social Media?</h2>
+            <p className="text-teal-100 text-lg mb-8">Let's create a social media strategy that drives real results for your brand.</p>
+            <button onClick={() => navigate('/contact')} className="bg-white text-[var(--brand-blue)] hover:bg-blue-50 font-bold py-3 px-8 rounded-full transition-colors cursor-pointer">
+              Get Started
+            </button>
+          </div>
         </div>
       </section>
     </div>

@@ -28,9 +28,7 @@ export default function Design() {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Our Design Work
           </h1>
-          <p className="text-slate-300 text-lg">
-            Explore our portfolio of creative design projects
-          </p>
+          <p className="text-slate-300 text-lg">`n            <span className="typewriter">Explore our portfolio of creative design projects</span>`n          </p>
         </div>
       </div>
 

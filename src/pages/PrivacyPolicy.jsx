@@ -21,9 +21,7 @@ export default function PrivacyPolicy() {
             Back
           </button>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
-          <p className="text-slate-300 text-lg">
-            Your privacy is important to us. Learn how we collect, use, and protect your data.
-          </p>
+          <p className="text-slate-300 text-lg">`n            <span className="typewriter">Your privacy is important to us. Learn how we collect, use, and protect your data.</span>`n          </p>
         </div>
       </div>
 
