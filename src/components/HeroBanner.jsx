@@ -12,9 +12,9 @@ import {
 export default function HeroBanner() {
   const navigate = useNavigate()
   const images = [
-    "/src/assets/images/Hero/hero1.jpg",
-    "/src/assets/images/Hero/hero2.jpg",
-    "/src/assets/images/Hero/hero3.jpeg"
+    "/images/Hero/hero1.jpg",
+    "/images/Hero/hero2.jpg",
+    "/images/Hero/hero3.jpeg"
   ]
 
   const [currentIndex, setCurrentIndex] = useState(0)

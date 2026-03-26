@@ -12,7 +12,7 @@ export const newsEventsData = {
       heading: "The Leader",
       paragraph3: "She could be your manager, a founder, a team lead, a principal, or the quiet decision-maker at home. She holds things together, makes tough calls, and walks into rooms where not many women used to be.",
       paragraph4: "Her style keywords: sharp, confident, polished, not fussy.",
-      image: "/src/assets/images/Blog/Blog1.jpg",
+      image: "/images/Blog/Blog1.jpg",
       link: "Read more..."
     },
     {
@@ -24,7 +24,7 @@ export const newsEventsData = {
       heading: "The Leader",
       paragraph3: "She could be your manager, a founder, a team lead, a principal, or the quiet decision-maker at home. She holds things together, makes tough calls, and walks into rooms where not many women used to be.",
       paragraph4: "Her style keywords: sharp, confident, polished, not fussy.",
-      image: "/src/assets/images/Blog/Blog2.jpg",
+      image: "/images/Blog/Blog2.jpg",
       link: "Read more..."
     },
     {
@@ -36,7 +36,7 @@ export const newsEventsData = {
       heading: "The Leader",
       paragraph3: "She could be your manager, a founder, a team lead, a principal, or the quiet decision-maker at home. She holds things together, makes tough calls, and walks into rooms where not many women used to be.",
       paragraph4: "Her style keywords: sharp, confident, polished, not fussy.",
-      image: "/src/assets/images/Blog/Blog3.jpg",
+      image: "/images/Blog/Blog3.jpg",
       link: "Read more..."
     },
     {
@@ -48,7 +48,7 @@ export const newsEventsData = {
       heading: "The Leader",
       paragraph3: "She could be your manager, a founder, a team lead, a principal, or the quiet decision-maker at home. She holds things together, makes tough calls, and walks into rooms where not many women used to be.",
       paragraph4: "Her style keywords: sharp, confident, polished, not fussy.",
-      image: "/src/assets/images/Blog/Blog4.jpg",
+      image: "/images/Blog/Blog4.jpg",
       link: "Read more..."
     },
     {
@@ -60,7 +60,7 @@ export const newsEventsData = {
       heading: "The Leader",
       paragraph3: "She could be your manager, a founder, a team lead, a principal, or the quiet decision-maker at home. She holds things together, makes tough calls, and walks into rooms where not many women used to be.",
       paragraph4: "Her style keywords: sharp, confident, polished, not fussy.",
-      image: "/src/assets/images/Blog/Blog5.jpg",
+      image: "/images/Blog/Blog5.jpg",
       link: "Read more..."
     },
     {
@@ -72,7 +72,7 @@ export const newsEventsData = {
       heading: "The Leader",
       paragraph3: "She could be your manager, a founder, a team lead, a principal, or the quiet decision-maker at home. She holds things together, makes tough calls, and walks into rooms where not many women used to be.",
       paragraph4: "Her style keywords: sharp, confident, polished, not fussy.",
-      image: "/src/assets/images/Blog/Blog6.jpg",
+      image: "/images/Blog/Blog6.jpg",
       link: "Read more..."
     },
   ]

@@ -17,7 +17,7 @@ export default function PR() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div className="page-hero">
-        <img src="/src/assets/images/Hero/herobanner.jpg" alt="hero" className="absolute inset-0 w-full h-full object-cover object-center" />
+        <img src="/images/Hero/herobanner.jpg" alt="hero" className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-slate-900/75" />
         <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48 relative z-10 h-full flex flex-col justify-center">
           <button

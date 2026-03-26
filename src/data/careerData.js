@@ -236,21 +236,21 @@ export const careerData = {
       quote: "Working at Cultre Boat has been transformative for my career. The team is supportive and the projects are incredibly exciting!",
       author: "Priya Sharma",
       position: "Senior Designer",
-      image: "/src/assets/images/Hero/hero1.jpg"
+      image: "/images/Hero/hero1.jpg"
     },
     {
       id: 2,
       quote: "I love the creative freedom and collaborative environment here. Every day brings new challenges and learning opportunities.",
       author: "Rahul Patel",
       position: "Content Strategist",
-      image: "/src/assets/images/Hero/hero2.jpg"
+      image: "/images/Hero/hero2.jpg"
     },
     {
       id: 3,
       quote: "The company truly values its employees and invests in their growth. Highly recommend joining the Cultre Boat team!",
       author: "Anjali Verma",
       position: "Social Media Manager",
-      image: "/src/assets/images/Hero/hero3.jpeg"
+      image: "/images/Hero/hero3.jpeg"
     }
   ],
 

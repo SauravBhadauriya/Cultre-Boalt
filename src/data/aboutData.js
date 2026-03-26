@@ -63,28 +63,28 @@ export const aboutData = {
       name: "Founder & Creative Director",
       role: "Visionary Leader",
       bio: "With 15+ years of experience in creative design and branding, leading the creative vision.",
-      image: "/src/assets/images/Hero/hero1.jpg"
+      image: "/images/Hero/hero1.jpg"
     },
     {
       id: 2,
       name: "Head of PR & Communications",
       role: "Strategic Communicator",
       bio: "Expert in media relations and brand communications with 12+ years of industry experience.",
-      image: "/src/assets/images/Hero/hero2.jpg"
+      image: "/images/Hero/hero2.jpg"
     },
     {
       id: 3,
       name: "Social Media Director",
       role: "Digital Strategist",
       bio: "Specializes in social media strategy and digital marketing with proven track record.",
-      image: "/src/assets/images/Hero/hero3.jpeg"
+      image: "/images/Hero/hero3.jpeg"
     },
     {
       id: 4,
       name: "Design Lead",
       role: "Creative Designer",
       bio: "Award-winning designer with expertise in brand identity and visual design.",
-      image: "/src/assets/images/Brandlogo/brand-logo1.avif"
+      image: "/images/Brandlogo/brand-logo1.avif"
     }
   ],
 
@@ -159,19 +159,19 @@ export const aboutData = {
       id: 1,
       quote: "Cultre Boat transformed our brand identity and helped us connect with our audience in meaningful ways.",
       author: "CEO, Fashion Brand",
-      image: "/src/assets/images/Hero/hero1.jpg"
+      image: "/images/Hero/hero1.jpg"
     },
     {
       id: 2,
       quote: "Their strategic approach and creative excellence exceeded our expectations. Highly recommended!",
       author: "Marketing Director, Tech Startup",
-      image: "/src/assets/images/Hero/hero2.jpg"
+      image: "/images/Hero/hero2.jpg"
     },
     {
       id: 3,
       quote: "Working with Cultre Boat was a game-changer for our brand. They truly understand storytelling.",
       author: "Founder, Lifestyle Brand",
-      image: "/src/assets/images/Hero/hero3.jpeg"
+      image: "/images/Hero/hero3.jpeg"
     }
   ]
 }

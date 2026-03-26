@@ -12,19 +12,19 @@ export const resourcesData = {
         id: 1,
         title: "Our Corporate Profile",
         description: "Explore our global presence, advanced medical technology portfolio, and commitment to clinical excellence.",
-        image: "/src/assets/images/resources/resource1.jpg"
+        image: "/images/resources/resource1.jpg"
       },
       {
         id: 2,
         title: "Advanced Rehabilitation Technologies - India",
         description: "Explore our comprehensive catalog of advanced medical technologies in Neurosciences, Physiotherapy, and Aesthetics.",
-        image: "/src/assets/images/resources/resource2.jpg"
+        image: "/images/resources/resource2.jpg"
       },
       {
         id: 3,
         title: "Corporate Profile",
         description: "Explore our Corporate Profile to understand Cultre Boat's global presence, advanced technology portfolio, and commitment to excellence.",
-        image: "/src/assets/images/resources/resource3.jpg"
+        image: "/images/resources/resource3.jpg"
       }
     ]
   },

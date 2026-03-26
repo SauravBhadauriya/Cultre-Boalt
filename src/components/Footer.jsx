@@ -43,7 +43,7 @@ export default function Footer() {
     <footer className="relative text-slate-100">
       {/* Background image */}
       <img
-        src="/src/assets/images/footer.webp"
+        src="/images/footer.webp"
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
         aria-hidden="true"

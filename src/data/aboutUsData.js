@@ -2,11 +2,11 @@ export const aboutUsData = {
   title: "Your Creative Partner in Fashion & Design",
   description: "Backed by fashion industry experts and creative professionals, we go beyond styling—offering brand consultation, trend strategy, and long-term creative support to drive meaningful impact.",
   images: [
-    "/src/assets/images/Blog/Blog1.jpg",
-    "/src/assets/images/Blog/Blog2.jpg",
-    "/src/assets/images/Blog/Blog3.jpg",
-    "/src/assets/images/Blog/Blog4.jpg",
-    "/src/assets/images/Blog/Blog5.jpg",
+    "/images/Blog/Blog1.jpg",
+    "/images/Blog/Blog2.jpg",
+    "/images/Blog/Blog3.jpg",
+    "/images/Blog/Blog4.jpg",
+    "/images/Blog/Blog5.jpg",
   ],
   highlights: [
     {

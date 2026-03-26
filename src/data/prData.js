@@ -49,7 +49,7 @@ export const prData = {
       id: 1,
       title: "Luxury Fashion Campaign",
       category: "Fashion",
-      image: "/src/assets/images/Hero/hero1.jpg",
+      image: "/images/Hero/hero1.jpg",
       description: "High-end fashion brand PR campaign featuring editorial coverage and influencer partnerships",
       coverage: "15+ Publications",
       reach: "2.5M+ Impressions",
@@ -59,7 +59,7 @@ export const prData = {
       id: 2,
       title: "Lifestyle Brand Launch",
       category: "Lifestyle",
-      image: "/src/assets/images/Hero/hero2.jpg",
+      image: "/images/Hero/hero2.jpg",
       description: "Complete PR strategy for new lifestyle brand launch with media relations and events",
       coverage: "12+ Publications",
       reach: "1.8M+ Impressions",
@@ -69,7 +69,7 @@ export const prData = {
       id: 3,
       title: "Celebrity Endorsement",
       category: "Celebrity",
-      image: "/src/assets/images/Hero/hero3.jpeg",
+      image: "/images/Hero/hero3.jpeg",
       description: "Celebrity partnership and endorsement campaign with strategic media placement",
       coverage: "20+ Publications",
       reach: "3.2M+ Impressions",
@@ -79,7 +79,7 @@ export const prData = {
       id: 4,
       title: "Product Launch PR",
       category: "Product",
-      image: "/src/assets/images/Brandlogo/brand-logo1.avif",
+      image: "/images/Brandlogo/brand-logo1.avif",
       description: "Strategic product launch with press kit, media events, and influencer seeding",
       coverage: "18+ Publications",
       reach: "2.1M+ Impressions",
@@ -89,7 +89,7 @@ export const prData = {
       id: 5,
       title: "Brand Refresh Campaign",
       category: "Branding",
-      image: "/src/assets/images/Brandlogo/brand-logo2.avif",
+      image: "/images/Brandlogo/brand-logo2.avif",
       description: "Comprehensive PR campaign for brand refresh and repositioning",
       coverage: "14+ Publications",
       reach: "1.9M+ Impressions",
@@ -99,7 +99,7 @@ export const prData = {
       id: 6,
       title: "Influencer Collaboration",
       category: "Influencer",
-      image: "/src/assets/images/Brandlogo/brand-logo3.png",
+      image: "/images/Brandlogo/brand-logo3.png",
       description: "Multi-influencer collaboration campaign with coordinated media coverage",
       coverage: "25+ Publications",
       reach: "4.5M+ Impressions",
@@ -111,84 +111,84 @@ export const prData = {
     {
       id: 1,
       title: "Editorial Feature",
-      image: "/src/assets/images/Hero/hero1.jpg",
+      image: "/images/Hero/hero1.jpg",
       publication: "Vogue India",
       category: "Editorial"
     },
     {
       id: 2,
       title: "Lifestyle Shoot",
-      image: "/src/assets/images/Hero/hero2.jpg",
+      image: "/images/Hero/hero2.jpg",
       publication: "Harper's Bazaar",
       category: "Lifestyle"
     },
     {
       id: 3,
       title: "Celebrity Interview",
-      image: "/src/assets/images/Hero/hero3.jpeg",
+      image: "/images/Hero/hero3.jpeg",
       publication: "Elle Magazine",
       category: "Celebrity"
     },
     {
       id: 4,
       title: "Fashion Editorial",
-      image: "/src/assets/images/Brandlogo/brand-logo1.avif",
+      image: "/images/Brandlogo/brand-logo1.avif",
       publication: "Grazia",
       category: "Fashion"
     },
     {
       id: 5,
       title: "Brand Story",
-      image: "/src/assets/images/Brandlogo/brand-logo2.avif",
+      image: "/images/Brandlogo/brand-logo2.avif",
       publication: "Business Today",
       category: "Business"
     },
     {
       id: 6,
       title: "Influencer Feature",
-      image: "/src/assets/images/Brandlogo/brand-logo3.png",
+      image: "/images/Brandlogo/brand-logo3.png",
       publication: "Instagram Stories",
       category: "Social"
     },
     {
       id: 7,
       title: "Product Launch",
-      image: "/src/assets/images/Brandlogo/brand-logo4.jpg",
+      image: "/images/Brandlogo/brand-logo4.jpg",
       publication: "Cosmopolitan",
       category: "Product"
     },
     {
       id: 8,
       title: "Event Coverage",
-      image: "/src/assets/images/Brandlogo/brand-logo5.jpg",
+      image: "/images/Brandlogo/brand-logo5.jpg",
       publication: "Tatler",
       category: "Events"
     },
     {
       id: 9,
       title: "Fashion Week",
-      image: "/src/assets/images/Hero/hero1.jpg",
+      image: "/images/Hero/hero1.jpg",
       publication: "Vogue",
       category: "Fashion"
     },
     {
       id: 10,
       title: "Lifestyle Trend",
-      image: "/src/assets/images/Hero/hero2.jpg",
+      image: "/images/Hero/hero2.jpg",
       publication: "Architectural Digest",
       category: "Lifestyle"
     },
     {
       id: 11,
       title: "Celebrity Moment",
-      image: "/src/assets/images/Hero/hero3.jpeg",
+      image: "/images/Hero/hero3.jpeg",
       publication: "People Magazine",
       category: "Celebrity"
     },
     {
       id: 12,
       title: "Brand Collaboration",
-      image: "/src/assets/images/Brandlogo/brand-logo1.avif",
+      image: "/images/Brandlogo/brand-logo1.avif",
       publication: "Forbes",
       category: "Business"
     }
@@ -251,42 +251,42 @@ export const prData = {
       name: "Fashion Influencer",
       followers: "500K+",
       category: "Fashion",
-      image: "/src/assets/images/Hero/hero1.jpg"
+      image: "/images/Hero/hero1.jpg"
     },
     {
       id: 2,
       name: "Lifestyle Creator",
       followers: "350K+",
       category: "Lifestyle",
-      image: "/src/assets/images/Hero/hero2.jpg"
+      image: "/images/Hero/hero2.jpg"
     },
     {
       id: 3,
       name: "Beauty Expert",
       followers: "420K+",
       category: "Beauty",
-      image: "/src/assets/images/Hero/hero3.jpeg"
+      image: "/images/Hero/hero3.jpeg"
     },
     {
       id: 4,
       name: "Travel Blogger",
       followers: "280K+",
       category: "Travel",
-      image: "/src/assets/images/Brandlogo/brand-logo1.avif"
+      image: "/images/Brandlogo/brand-logo1.avif"
     },
     {
       id: 5,
       name: "Style Icon",
       followers: "600K+",
       category: "Fashion",
-      image: "/src/assets/images/Brandlogo/brand-logo2.avif"
+      image: "/images/Brandlogo/brand-logo2.avif"
     },
     {
       id: 6,
       name: "Wellness Coach",
       followers: "310K+",
       category: "Wellness",
-      image: "/src/assets/images/Brandlogo/brand-logo3.png"
+      image: "/images/Brandlogo/brand-logo3.png"
     }
   ],
 
@@ -296,21 +296,21 @@ export const prData = {
       client: "Luxury Fashion Brand",
       quote: "Their PR strategy increased our media coverage by 300% and elevated our brand positioning significantly.",
       author: "CEO",
-      image: "/src/assets/images/Hero/hero1.jpg"
+      image: "/images/Hero/hero1.jpg"
     },
     {
       id: 2,
       client: "Lifestyle Company",
       quote: "Exceptional work on our product launch. The media relations and influencer partnerships were perfectly executed.",
       author: "Marketing Director",
-      image: "/src/assets/images/Hero/hero2.jpg"
+      image: "/images/Hero/hero2.jpg"
     },
     {
       id: 3,
       client: "Beauty Brand",
       quote: "They managed our crisis communication with professionalism and helped restore our brand reputation.",
       author: "Brand Manager",
-      image: "/src/assets/images/Hero/hero3.jpeg"
+      image: "/images/Hero/hero3.jpeg"
     }
   ],
 

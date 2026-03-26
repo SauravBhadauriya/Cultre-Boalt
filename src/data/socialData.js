@@ -156,19 +156,19 @@ export const socialData = {
       id: 1,
       quote: "Cultre Boat transformed our social media presence. Our engagement increased by 300% in just 3 months!",
       author: "CEO, E-commerce Brand",
-      image: "/src/assets/images/Hero/hero1.jpg"
+      image: "/images/Hero/hero1.jpg"
     },
     {
       id: 2,
       quote: "Their content strategy is creative and data-driven. We've seen significant growth in followers and conversions.",
       author: "Marketing Manager, Tech Startup",
-      image: "/src/assets/images/Hero/hero2.jpg"
+      image: "/images/Hero/hero2.jpg"
     },
     {
       id: 3,
       quote: "Professional, responsive, and results-oriented. Highly recommend for any brand looking to grow on social media.",
       author: "Founder, Lifestyle Brand",
-      image: "/src/assets/images/Hero/hero3.jpeg"
+      image: "/images/Hero/hero3.jpeg"
     }
   ]
 }
