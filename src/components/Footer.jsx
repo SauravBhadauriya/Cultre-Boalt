@@ -40,7 +40,19 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-slate-900 text-slate-100">
+    <footer className="relative text-slate-100">
+      {/* Background image */}
+      <img
+        src="/src/assets/images/footer.webp"
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover"
+        aria-hidden="true"
+      />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-slate-900/80" />
+
+      {/* Content */}
+      <div className="relative z-10">
       {/* Top Section */}
       <div className="border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 py-12 md:py-16">
@@ -118,6 +130,7 @@ export default function Footer() {
             })}
           </ul>
         </div>
+      </div>
       </div>
     </footer>
   )

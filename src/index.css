@@ -225,3 +225,12 @@
 .page-transition {
   animation: pageFadeIn 0.35s ease forwards;
 }
+
+/* Hero progress bar animation — matches 5s autoplay delay */
+@keyframes progress {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+.animate-progress {
+  animation: progress 5s linear forwards;
+}

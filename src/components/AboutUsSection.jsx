@@ -9,10 +9,10 @@ export default function AboutUsSection() {
   return (
     <section className="section-base bg-white">
       <div className="container-base">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           {/* Left Side - Image Carousel */}
-          <div className="lg:col-span-2 h-[500px]">
+          <div className="h-[500px]">
             <Carousel
               plugins={[plugin.current]}
               opts={{ loop: true, duration: 60 }}
@@ -39,7 +39,7 @@ export default function AboutUsSection() {
           </div>
 
           {/* Right Side - Content */}
-          <div className="lg:col-span-3 space-y-6">
+          <div className="space-y-6">
             <div>
               <p className="text-[var(--brand-blue)] font-bold text-sm uppercase tracking-widest mb-3">
                 About Us

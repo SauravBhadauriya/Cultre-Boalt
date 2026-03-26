@@ -59,7 +59,7 @@ export default function HeroBanner() {
       <CarouselContent>
         {images.map((img, index) => (
           <CarouselItem key={index}>
-            <div className="relative w-full h-[50vh] md:h-[70vh] lg:h-[90vh]">
+            <div className="relative w-full h-[50vh] md:h-[70vh] lg:h-screen">
               {/* Image */}
               <img
                 src={img}
@@ -94,18 +94,24 @@ export default function HeroBanner() {
                     </button>
                   </div>
 
-                  {/* Carousel Dots */}
+                  {/* Progress Dots */}
                   <div className="mt-8 flex gap-2">
-                    {images.map((_, index) => (
+                    {images.map((_, i) => (
                       <button
-                        key={index}
-                        onClick={() => handleDotClick(index)}
-                        className={`h-1 transition-all cursor-pointer hover:opacity-80 ${
-                          index === currentIndex 
-                            ? 'w-8 bg-white shadow-lg shadow-white/60' 
-                            : 'w-2 bg-white/50'
-                        }`}
-                      />
+                        key={i}
+                        onClick={() => handleDotClick(i)}
+                        className="h-1 w-8 bg-white/30 rounded-full overflow-hidden cursor-pointer"
+                      >
+                        <div
+                          className={`h-full bg-white rounded-full ${
+                            i === currentIndex
+                              ? 'animate-progress'
+                              : i < currentIndex
+                              ? 'w-full'
+                              : 'w-0'
+                          }`}
+                        />
+                      </button>
                     ))}
                   </div>
                 </div>

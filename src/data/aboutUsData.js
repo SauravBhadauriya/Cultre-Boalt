@@ -1,32 +1,33 @@
 export const aboutUsData = {
-  title: "Your Trusted Partner in Creative Solutions",
-  subtitle: "With presence in 15+ countries, Cultre Boat empowers brands with cutting-edge technologies in Design, PR, and Social Media Marketing.",
-  description: "Backed by industry experts and creative professionals, we go beyond distribution—offering consultation, strategy, and long-term support to drive meaningful impact.",
+  title: "Your Creative Partner in Fashion & Design",
+  description: "Backed by fashion industry experts and creative professionals, we go beyond styling—offering brand consultation, trend strategy, and long-term creative support to drive meaningful impact.",
   images: [
-    "/src/assets/images/about/teamimg1.jpg",
-    "/src/assets/images/about/teamimg2.jpg",
-    "/src/assets/images/about/teamimg3.jpeg"
+    "/src/assets/images/Blog/Blog1.jpg",
+    "/src/assets/images/Blog/Blog2.jpg",
+    "/src/assets/images/Blog/Blog3.jpg",
+    "/src/assets/images/Blog/Blog4.jpg",
+    "/src/assets/images/Blog/Blog5.jpg",
   ],
   highlights: [
     {
+      icon: "👗",
+      title: "Fashion Forward",
+      description: "Curating the latest trends in bridal, ethnic, and contemporary fashion"
+    },
+    {
+      icon: "✂️",
+      title: "Design Excellence",
+      description: "Crafting bespoke looks with precision, style, and cultural richness"
+    },
+    {
       icon: "🌍",
-      title: "Presence in 15+ Countries",
-      description: "Expanding global reach in creative and digital solutions"
-    },
-    {
-      icon: "🚀",
-      title: "Beyond Distribution",
-      description: "Providing consultation, strategy, and long-term support"
-    },
-    {
-      icon: "👥",
-      title: "Backed by Experts",
-      description: "Supported by industry professionals and creative specialists"
+      title: "Global Presence",
+      description: "Expanding fashion reach across 15+ countries and growing"
     },
     {
       icon: "✨",
-      title: "Specialized Focus",
-      description: "Expertise in Design, PR, and Social Media Marketing"
+      title: "Specialized Styling",
+      description: "Expertise in bridal lehengas, dupattas, and statement fashion pieces"
     }
   ]
 }
