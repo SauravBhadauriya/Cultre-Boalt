@@ -62,9 +62,9 @@ export default function Bolg() {
               className="w-full"
               opts={{ align: 'start', loop: true }}
             >
-              <CarouselContent>
+              <CarouselContent className="ml-0">
                 {newsEventsData.newsItems.map((item) => (
-                  <CarouselItem key={item.id}>
+                  <CarouselItem key={item.id} className="pl-0">
                     <div className="h-[260px] sm:h-[340px] lg:h-[420px] rounded-xl overflow-hidden">
                       <img
                         src={item.image}

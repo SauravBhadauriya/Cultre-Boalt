@@ -59,7 +59,7 @@ export default function HeroBanner() {
       <CarouselContent>
         {images.map((img, index) => (
           <CarouselItem key={index}>
-            <div className="relative w-full h-[50vh] md:h-[70vh] lg:h-screen">
+            <div className="relative w-full h-[45vh] sm:h-[50vh] md:h-[70vh] lg:h-screen">
               {/* Image */}
               <img
                 src={img}
@@ -68,41 +68,41 @@ export default function HeroBanner() {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/40 flex items-center px-4 sm:px-10 md:px-20 lg:px-48">
-                <div className="text-white max-w-2xl">
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+              <div className="absolute inset-0 bg-black/40 flex items-center justify-center px-4 sm:px-6 md:px-20 lg:px-48">
+                <div className="text-white text-center max-w-xl sm:max-w-2xl">
+                  <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight mb-2 sm:mb-3 md:mb-4">
                     We build stories that connect
                   </h1>
 
-                  <p className="mt-4 text-base md:text-lg text-gray-200">
+                  <p className="mt-2 sm:mt-3 md:mt-4 text-xs sm:text-sm md:text-base lg:text-lg text-gray-200 line-clamp-2 sm:line-clamp-none">
                     <span className="typewriter">
                       Creative branding, design & digital experiences that make impact.
                     </span>
                   </p>
 
-                  <div className="mt-6 flex flex-col sm:flex-row gap-4">
+                  <div className="mt-4 sm:mt-5 md:mt-6 flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 justify-center">
                     <button 
                       onClick={() => navigate('/contact')}
-                      className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors cursor-pointer"
+                      className="bg-white text-black px-3 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg font-semibold text-xs sm:text-sm md:text-base hover:bg-gray-100 transition-colors cursor-pointer w-auto min-h-[36px] sm:min-h-[40px] flex items-center justify-center whitespace-nowrap"
                     >
                       Get Started
                     </button>
 
                     <button 
                       onClick={() => navigate('/design')}
-                      className="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors cursor-pointer"
+                      className="border border-white text-white px-3 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg font-semibold text-xs sm:text-sm md:text-base hover:bg-white/10 transition-colors cursor-pointer w-auto min-h-[36px] sm:min-h-[40px] flex items-center justify-center whitespace-nowrap"
                     >
                       View Work
                     </button>
                   </div>
 
                   {/* Progress Dots */}
-                  <div className="mt-8 flex gap-2">
+                  <div className="mt-5 sm:mt-6 md:mt-8 flex gap-1.5 sm:gap-2 justify-center">
                     {images.map((_, i) => (
                       <button
                         key={i}
                         onClick={() => handleDotClick(i)}
-                        className="h-1 w-8 bg-white/30 rounded-full overflow-hidden cursor-pointer"
+                        className="h-1 w-6 sm:w-8 bg-white/30 rounded-full overflow-hidden cursor-pointer"
                       >
                         <div
                           className={`h-full bg-white rounded-full ${

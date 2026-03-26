@@ -17,7 +17,7 @@ export default function Testimonials() {
           </div>
 
           {/* Cards */}
-          <CarouselContent className="-ml-4 md:-ml-6">
+          <CarouselContent className="ml-0">
             {testimonialsData.testimonials.map((testimonial) => (
               <CarouselItem key={testimonial.id} className="pl-4 md:pl-6 basis-full md:basis-1/2 lg:basis-1/3">
                 <Card className="bg-white border border-slate-200 h-full hover:shadow-md transition-shadow duration-300">

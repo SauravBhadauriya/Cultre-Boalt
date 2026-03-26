@@ -13,7 +13,13 @@ export default function WhatWeDo() {
     {
       icon: Megaphone,
       title: "PR & Communications",
-      description: "Strategic public relations and communications that build your brand's reputation, manage your narrative, and create meaningful connections with your stakeholders."
+      description: (
+        <>
+          Strategic public relations and communications that build your brand's reputation,
+          <br />
+          manage your narrative, and create meaningful connections with your stakeholders.
+        </>
+      )
     },
     {
       icon: Share2,
@@ -23,20 +29,20 @@ export default function WhatWeDo() {
   ]
 
   return (
-    <section id="services" className="section-base bg-white">
+    <section className="section-base bg-white">
       <div className="container-base">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-slate-900">
+        <div className="text-center mb-8 md:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight mb-4 md:mb-6 text-slate-900">
             What We Do
           </h2>
-          <p className="text-slate-500 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
+          <p className="text-slate-500 text-xs sm:text-sm md:text-base lg:text-lg max-w-xl mx-auto leading-relaxed px-2">
             We specialize in comprehensive brand solutions that combine strategy, creativity,
             and digital expertise.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {services.map((service, index) => {
             const IconComponent = service.icon
             return (
@@ -44,16 +50,16 @@ export default function WhatWeDo() {
                 key={index}
                 className="hover:shadow-lg transition-all duration-300 hover:border-[var(--brand-blue)]/30 border-slate-200"
               >
-                <CardHeader>
-                  <div className="mb-4 p-3 bg-[var(--brand-blue)]/10 rounded-lg w-fit">
-                    <IconComponent className="w-6 h-6 text-[var(--brand-blue)]" />
+                <CardHeader className="pb-3 md:pb-4">
+                  <div className="mb-3 md:mb-4 p-2 md:p-3 bg-[var(--brand-blue)]/10 rounded-lg w-fit">
+                    <IconComponent className="w-5 h-5 md:w-6 md:h-6 text-[var(--brand-blue)]" />
                   </div>
-                  <CardTitle className="text-xl md:text-2xl text-slate-900">
+                  <CardTitle className="text-lg md:text-xl lg:text-2xl text-slate-900">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-slate-600 leading-relaxed">
+                  <p className="text-slate-600 text-sm md:text-base leading-relaxed">
                     {service.description}
                   </p>
                 </CardContent>

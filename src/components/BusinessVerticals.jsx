@@ -13,7 +13,7 @@ export default function BusinessVerticals() {
         <SectionHeader label={verticalsData.subtitle} title={verticalsData.title} />
 
         <Carousel plugins={[plugin.current]} className="w-full" opts={{ align: "center", loop: true }}>
-          <CarouselContent className="-ml-2 md:-ml-4">
+          <CarouselContent className="ml-0">
             {verticalsData.verticals.map((vertical) => (
               <CarouselItem key={vertical.id} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3">
                 <div className="flex flex-col items-center gap-4">

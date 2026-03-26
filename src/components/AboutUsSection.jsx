@@ -9,19 +9,19 @@ export default function AboutUsSection() {
   return (
     <section className="section-base bg-white">
       <div className="container-base">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
 
           {/* Left Side - Image Carousel */}
-          <div className="h-[300px] sm:h-[400px] lg:h-[500px]">
+          <div className="h-[250px] sm:h-[350px] lg:h-[500px]">
             <Carousel
               plugins={[plugin.current]}
               opts={{ loop: true, duration: 60 }}
               className="w-full h-full"
             >
-              <CarouselContent className="h-full">
+              <CarouselContent className="h-full ml-0">
                 {aboutUsData.images.map((img, i) => (
-                  <CarouselItem key={i} className="h-full">
-                    <div className="h-[300px] sm:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-lg">
+                  <CarouselItem key={i} className="h-full pl-0">
+                    <div className="h-[250px] sm:h-[350px] lg:h-[500px] rounded-2xl overflow-hidden shadow-lg">
                       <img
                         src={img}
                         alt={`Team ${i + 1}`}
@@ -39,27 +39,27 @@ export default function AboutUsSection() {
           </div>
 
           {/* Right Side - Content */}
-          <div className="space-y-6">
+          <div className="space-y-4 md:space-y-6">
             <div>
-              <p className="text-[var(--brand-blue)] font-bold text-sm uppercase tracking-widest mb-3">
+              <p className="text-[var(--brand-blue)] font-bold text-xs md:text-sm uppercase tracking-widest mb-2 md:mb-3">
                 About Us
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
                 {aboutUsData.title}
               </h2>
             </div>
 
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed">
+            <p className="text-slate-600 text-sm md:text-base lg:text-lg leading-relaxed">
               {aboutUsData.description}
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 pt-2 md:pt-4">
               {aboutUsData.highlights.map((highlight, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <span className="text-2xl">{highlight.icon}</span>
+                  <span className="text-xl md:text-2xl flex-shrink-0">{highlight.icon}</span>
                   <div>
-                    <h3 className="font-semibold text-slate-900">{highlight.title}</h3>
-                    <p className="text-slate-600 text-sm">{highlight.description}</p>
+                    <h3 className="font-semibold text-slate-900 text-sm md:text-base">{highlight.title}</h3>
+                    <p className="text-slate-600 text-xs md:text-sm">{highlight.description}</p>
                   </div>
                 </div>
               ))}

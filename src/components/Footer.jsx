@@ -55,7 +55,7 @@ export default function Footer() {
       <div className="relative z-10">
       {/* Top Section */}
       <div className="border-b border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48 py-12 md:py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
             {/* Logo + Tagline */}
             <div className="lg:col-span-1">
@@ -106,7 +106,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Section */}
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-slate-400 text-sm text-center md:text-left">
             © {currentYear} Cultre Boat. All rights reserved.

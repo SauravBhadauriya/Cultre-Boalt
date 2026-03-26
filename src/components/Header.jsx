@@ -42,7 +42,7 @@ export default function Header() {
           : 'bg-transparent border-b border-white/10'
       }`}
     >
-      <nav className="flex justify-between items-center px-10 md:px-20 lg:px-48 py-4">
+      <nav className="flex justify-between items-center px-4 sm:px-6 md:px-20 lg:px-48 py-4">
         {/* Logo */}
         <button
           onClick={() => handleNav('/')}

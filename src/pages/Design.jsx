@@ -36,13 +36,13 @@ export default function Design() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 py-12 md:py-16 lg:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48 py-12 md:py-16 lg:py-20">
         {/* Category Filter */}
         <div className="mb-12">
-          <div className="flex flex-wrap gap-3 justify-center">
+          <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
             <button
               onClick={() => setSelectedCategory('all')}
-              className={`px-4 sm:px-6 py-2 min-h-[40px] rounded-full font-semibold transition-all ${
+              className={`px-3 sm:px-6 py-2 min-h-[36px] sm:min-h-[40px] rounded-full font-semibold text-sm sm:text-base transition-all ${
                 selectedCategory === 'all'
                   ? 'bg-[var(--brand-blue)] text-white'
                   : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
@@ -54,7 +54,7 @@ export default function Design() {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-4 sm:px-6 py-2 min-h-[40px] rounded-full font-semibold transition-all ${
+                className={`px-3 sm:px-6 py-2 min-h-[36px] sm:min-h-[40px] rounded-full font-semibold text-sm sm:text-base transition-all ${
                   selectedCategory === category.id
                     ? 'bg-[var(--brand-blue)] text-white'
                     : 'bg-slate-100 text-slate-700 hover:bg-slate-200'

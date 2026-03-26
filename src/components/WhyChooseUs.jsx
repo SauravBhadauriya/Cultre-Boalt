@@ -110,16 +110,16 @@ export default function WhyChooseUs() {
 
       {/* CTA */}
       <section className="relative overflow-hidden">
-        <div className="grid grid-cols-3 h-36 sm:h-48 md:h-64">
+        <div className="grid grid-cols-3 h-48 sm:h-56 md:h-64">
           <img src="/images/Blog/Blog1.jpg" alt="" className="w-full h-full object-cover" />
           <img src="/images/Blog/Blog4.jpg" alt="" className="w-full h-full object-cover" />
           <img src="/images/Blog/Blog6.jpg" alt="" className="w-full h-full object-cover" />
         </div>
-        <div className="absolute inset-0 bg-[var(--brand-teal)]/80 flex items-center justify-center">
-          <div className="text-center text-white px-4">
-            <h2 className="section-heading-white mb-4">Ready to Work With Us?</h2>
-            <p className="text-teal-100 text-lg mb-8">Let's create something extraordinary together. Get in touch with our team today.</p>
-            <Button onClick={() => navigate('/contact')} className="bg-white text-[var(--brand-blue)] hover:bg-blue-50 font-bold py-3 px-8 rounded-full cursor-pointer">
+        <div className="absolute inset-0 bg-[var(--brand-teal)]/80 flex items-center justify-center p-4">
+          <div className="text-center text-white max-w-2xl">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Ready to Work With Us?</h2>
+            <p className="text-teal-100 text-sm sm:text-base md:text-lg mb-6 sm:mb-8">Let's create something extraordinary together. Get in touch with our team today.</p>
+            <Button onClick={() => navigate('/contact')} className="bg-white text-[var(--brand-blue)] hover:bg-blue-50 font-bold py-3 sm:py-3 px-4 sm:px-8 rounded-full cursor-pointer text-sm sm:text-base w-full sm:w-auto min-h-[44px] flex items-center justify-center">
               Get Started
             </Button>
           </div>

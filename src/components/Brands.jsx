@@ -21,7 +21,7 @@ export default function Brands() {
             loop: true,
           }}
         >
-          <CarouselContent className="-ml-2 md:-ml-4">
+          <CarouselContent className="ml-0">
             {brandPartners.map((partner, index) => (
               <CarouselItem 
                 key={index}

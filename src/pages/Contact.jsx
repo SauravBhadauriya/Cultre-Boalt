@@ -99,7 +99,7 @@ export default function Contact() {
           {/* Left Side - Contact Info */}
           <div className="space-y-8">
             {/* Image collage */}
-            <div className="grid grid-cols-2 gap-3 h-40 sm:h-56">
+            <div className="grid grid-cols-2 gap-4 sm:gap-3 h-40 sm:h-56">
               <div className="row-span-2 rounded-2xl overflow-hidden shadow-md">
                 <img src="/images/Blog/Blog1.jpg" alt="" className="w-full h-full object-cover" />
               </div>
@@ -232,7 +232,7 @@ export default function Contact() {
               {/* Form Fields */}
               {contactData.formFields.map((field) => (
                 <div key={field.id}>
-                  <label htmlFor={field.id} className="block text-sm font-bold text-slate-900 uppercase tracking-wide mb-2">
+                  <label htmlFor={field.id} className="block text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-wide mb-2">
                     {field.label}
                     {field.required && <span className="text-red-600">*</span>}
                   </label>
@@ -246,7 +246,7 @@ export default function Contact() {
                       placeholder={field.placeholder}
                       rows={field.rows}
                       required={field.required}
-                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-[var(--brand-blue)] focus:ring-2 focus:ring-[var(--brand-blue)]/10 transition-all resize-none"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-[var(--brand-blue)] focus:ring-2 focus:ring-[var(--brand-blue)]/10 transition-all resize-none text-sm sm:text-base"
                     />
                   ) : (
                     <input
@@ -257,7 +257,7 @@ export default function Contact() {
                       onChange={handleChange}
                       placeholder={field.placeholder}
                       required={field.required}
-                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-[var(--brand-blue)] focus:ring-2 focus:ring-[var(--brand-blue)]/10 transition-all"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-[var(--brand-blue)] focus:ring-2 focus:ring-[var(--brand-blue)]/10 transition-all text-sm sm:text-base"
                     />
                   )}
                 </div>
@@ -266,7 +266,7 @@ export default function Contact() {
               <Button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-[var(--brand-blue)] hover:opacity-90 disabled:bg-slate-400 text-white font-bold py-3 px-6 rounded-lg uppercase tracking-wide"
+                className="w-full bg-[var(--brand-blue)] hover:opacity-90 disabled:bg-slate-400 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg uppercase tracking-wide text-sm sm:text-base"
               >
                 {loading ? 'Submitting...' : 'Submit'}
               </Button>
@@ -277,25 +277,25 @@ export default function Contact() {
 
       {/* Image Banner + Stats */}
       <div className="relative">
-        <div className="grid grid-cols-3 h-36 sm:h-48 md:h-64 overflow-hidden">
+        <div className="grid grid-cols-3 h-56 sm:h-64 md:h-72 overflow-hidden">
           <img src="/images/Blog/Blog2.jpg" alt="" className="w-full h-full object-cover" />
           <img src="/images/Blog/Blog4.jpg" alt="" className="w-full h-full object-cover" />
           <img src="/images/Blog/Blog6.jpg" alt="" className="w-full h-full object-cover" />
         </div>
-        <div className="absolute inset-0 bg-[var(--brand-teal)]/80 flex items-center">
-          <div className="max-w-7xl mx-auto px-4 w-full">
-            <div className="grid grid-cols-3 gap-8 text-center">
+        <div className="absolute inset-0 bg-[var(--brand-teal)]/80 flex items-center p-4">
+          <div className="max-w-7xl mx-auto w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-center">
               <div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-1">24/7</div>
-                <p className="text-teal-100 text-sm">Email Support Available</p>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">24/7</div>
+                <p className="text-teal-100 text-xs sm:text-sm">Email Support Available</p>
               </div>
               <div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-1">2-4 hrs</div>
-                <p className="text-teal-100 text-sm">Average Response Time</p>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">2-4 hrs</div>
+                <p className="text-teal-100 text-xs sm:text-sm">Average Response Time</p>
               </div>
               <div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-1">100%</div>
-                <p className="text-teal-100 text-sm">Client Satisfaction</p>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">100%</div>
+                <p className="text-teal-100 text-xs sm:text-sm">Client Satisfaction</p>
               </div>
             </div>
           </div>

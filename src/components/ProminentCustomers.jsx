@@ -42,7 +42,7 @@ export default function ProminentCustomers() {
           className="w-full"
           opts={{ align: 'start', loop: true }}
         >
-          <CarouselContent className="-ml-2 md:-ml-4">
+          <CarouselContent className="ml-0">
             {activeCustomers.map((customer) => (
               <CarouselItem
                 key={customer.id}

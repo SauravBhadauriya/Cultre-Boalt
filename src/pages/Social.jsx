@@ -111,7 +111,7 @@ export default function Social() {
             <h2 className="section-heading">Social Media in Action</h2>
             <p className="text-slate-600 mt-3 max-w-xl mx-auto">A glimpse of the creative content and campaigns we've delivered for our clients.</p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 md:gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-3 md:gap-4">
             {[
               { src: "/images/Blog/Blog1.jpg", label: "Fashion Campaign" },
               { src: "/images/Blog/Blog2.jpg", label: "Bridal Content" },
@@ -346,16 +346,16 @@ export default function Social() {
 
       {/* CTA Section */}
       <section className="relative overflow-hidden">
-        <div className="grid grid-cols-3 h-36 sm:h-48 md:h-64">
+        <div className="grid grid-cols-3 h-48 sm:h-56 md:h-64">
           <img src="/images/Blog/Blog3.jpg" alt="" className="w-full h-full object-cover" />
           <img src="/images/Blog/Blog5.jpg" alt="" className="w-full h-full object-cover" />
           <img src="/images/Blog/Blog7.jpg" alt="" className="w-full h-full object-cover" />
         </div>
-        <div className="absolute inset-0 bg-[var(--brand-teal)]/80 flex items-center justify-center">
-          <div className="text-center text-white px-4">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Grow Your Social Media?</h2>
-            <p className="text-teal-100 text-lg mb-8">Let's create a social media strategy that drives real results for your brand.</p>
-            <Button onClick={() => navigate('/contact')} className="bg-white text-[var(--brand-blue)] hover:bg-blue-50 font-bold py-3 px-8 rounded-full cursor-pointer">
+        <div className="absolute inset-0 bg-[var(--brand-teal)]/80 flex items-center justify-center p-4">
+          <div className="text-center text-white max-w-2xl">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Ready to Grow Your Social Media?</h2>
+            <p className="text-teal-100 text-sm sm:text-base md:text-lg mb-6 sm:mb-8">Let's create a social media strategy that drives real results for your brand.</p>
+            <Button onClick={() => navigate('/contact')} className="bg-white text-[var(--brand-blue)] hover:bg-blue-50 font-bold py-3 sm:py-3 px-4 sm:px-8 rounded-full cursor-pointer text-sm sm:text-base w-full sm:w-auto min-h-[44px] flex items-center justify-center">
               Get Started
             </Button>
           </div>
