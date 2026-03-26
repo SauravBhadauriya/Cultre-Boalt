@@ -1,21 +1,4 @@
-{
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "devCommand": "npm run dev",
-  "installCommand": "npm install",
-  "framework": "vite",
-  "nodeVersion": "20.x",
-  "env": {
-    "VITE_CONTACT_EMAIL": "@vite_contact_email",
-    "VITE_CONTACT_PHONE": "@vite_contact_phone",
-    "VITE_FACEBOOK_URL": "@vite_facebook_url",
-    "VITE_INSTAGRAM_URL": "@vite_instagram_url",
-    "VITE_LINKEDIN_URL": "@vite_linkedin_url",
-    "VITE_API_URL": "@vite_api_url",
-    "VITE_GOOGLE_ANALYTICS_ID": "@vite_google_analytics_id",
-    "VITE_HOTJAR_ID": "@vite_hotjar_id",
-    "VITE_SENTRY_DSN": "@vite_sentry_dsn"
-  },
+
   "rewrites": [
     {
       "source": "/(.*)",
