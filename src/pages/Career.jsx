@@ -77,7 +77,7 @@ export default function Career() {
       <div className="page-hero">
         <img src="/images/Hero/herobanner.jpg" alt="hero" className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-slate-900/75" />
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48 relative z-10 h-full flex flex-col justify-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48 relative z-10 h-full flex flex-col justify-center">
           <button
             onClick={() => navigate(-1)}
             className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors mb-8 cursor-pointer"
@@ -85,17 +85,19 @@ export default function Career() {
             <ArrowLeft className="w-5 h-5" />
             Back
           </button>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
             {careerData.overview.title}
           </h1>
-          <p className="text-slate-300 text-base md:text-lg max-w-2xl">`n           <span className="typewriter">{careerData.overview.description}</span>`n          </p>
+          <p className="text-slate-300 text-base md:text-lg max-w-2xl">
+            <span className="typewriter">{careerData.overview.description}</span>
+            </p>
         </div>
       </div>
 
       {/* Benefits Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-900 mb-8 md:mb-12">
             Why Join Us?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -115,8 +117,8 @@ export default function Career() {
 
       {/* Culture Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-900 mb-8 md:mb-12">
             Our Culture
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -136,8 +138,8 @@ export default function Career() {
 
       {/* Open Positions Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-900 mb-8 md:mb-12">
             Open Positions
           </h2>
 
@@ -147,7 +149,7 @@ export default function Career() {
               <button
                 key={dept}
                 onClick={() => setFilterDepartment(dept)}
-                className={`px-6 py-2 rounded-full font-semibold transition-all cursor-pointer ${
+                className={`px-4 sm:px-6 py-2 min-h-[40px] rounded-full font-semibold transition-all cursor-pointer ${
                   filterDepartment === dept
                     ? 'bg-[var(--brand-blue)] text-white'
                     : 'bg-slate-200 text-slate-900 hover:bg-slate-300'
@@ -232,13 +234,13 @@ export default function Career() {
                         </ul>
                       </div>
                     </div>
-                    <button 
+                    <Button
                       onClick={() => handleApplyClick(job)}
-                      className="mt-8 bg-[var(--brand-blue)] hover:opacity-90 text-white font-bold py-3 px-8 rounded-lg transition-colors flex items-center gap-2 cursor-pointer"
+                      className="mt-8 bg-[var(--brand-blue)] hover:opacity-90 text-white font-bold py-3 px-8 rounded-lg flex items-center gap-2 cursor-pointer"
                     >
                       <Mail className="w-5 h-5" />
                       Apply Now
-                    </button>
+                    </Button>
                   </div>
                 )}
               </div>
@@ -249,8 +251,8 @@ export default function Career() {
 
       {/* Testimonials Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-900 mb-8 md:mb-12">
             What Our Team Says
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -285,7 +287,7 @@ export default function Career() {
       {/* FAQ Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-900 mb-8 md:mb-12">
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
@@ -320,7 +322,7 @@ export default function Career() {
 
       {/* CTA Section */}
       <section className="relative overflow-hidden">
-        <div className="grid grid-cols-3 h-48 md:h-64">
+        <div className="grid grid-cols-3 h-36 sm:h-48 md:h-64">
           <img src="/images/Blog/Blog2.jpg" alt="" className="w-full h-full object-cover" />
           <img src="/images/Blog/Blog4.jpg" alt="" className="w-full h-full object-cover" />
           <img src="/images/Blog/Blog6.jpg" alt="" className="w-full h-full object-cover" />
@@ -329,9 +331,9 @@ export default function Career() {
           <div className="text-center text-white px-4">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Join Our Team?</h2>
             <p className="text-teal-100 text-lg mb-8">Explore open positions and start your journey with Cultre Boat today.</p>
-            <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="bg-white text-[var(--brand-blue)] hover:bg-blue-50 font-bold py-3 px-8 rounded-full transition-colors cursor-pointer">
+            <Button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="bg-white text-[var(--brand-blue)] hover:bg-blue-50 font-bold py-3 px-8 rounded-full cursor-pointer">
               View All Positions
-            </button>
+            </Button>
           </div>
         </div>
       </section>

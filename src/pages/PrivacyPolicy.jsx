@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
       <div className="page-hero">
         <img src="/images/Hero/herobanner.jpg" alt="hero" className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-slate-900/75" />
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48 relative z-10 h-full flex flex-col justify-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48 relative z-10 h-full flex flex-col justify-center">
           <button
             onClick={() => navigate(-1)}
             className="back-btn self-start"
@@ -21,7 +21,10 @@ export default function PrivacyPolicy() {
             Back
           </button>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
-          <p className="text-slate-300 text-lg">`n            <span className="typewriter">Your privacy is important to us. Learn how we collect, use, and protect your data.</span>`n          </p>
+          <p className="text-slate-300 text-lg">
+            <span className="typewriter">Your privacy is important to us. Learn how we collect, use, and protect your data.
+</span>
+            </p>
         </div>
       </div>
 

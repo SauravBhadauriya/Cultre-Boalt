@@ -12,7 +12,7 @@ export default function AboutUsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           {/* Left Side - Image Carousel */}
-          <div className="h-[500px]">
+          <div className="h-[300px] sm:h-[400px] lg:h-[500px]">
             <Carousel
               plugins={[plugin.current]}
               opts={{ loop: true, duration: 60 }}
@@ -21,7 +21,7 @@ export default function AboutUsSection() {
               <CarouselContent className="h-full">
                 {aboutUsData.images.map((img, i) => (
                   <CarouselItem key={i} className="h-full">
-                    <div className="h-[500px] rounded-2xl overflow-hidden shadow-lg">
+                    <div className="h-[300px] sm:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-lg">
                       <img
                         src={img}
                         alt={`Team ${i + 1}`}

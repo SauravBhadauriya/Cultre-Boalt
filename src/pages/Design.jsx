@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { designData } from '@/data/designData'
 import { X, ArrowLeft } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 export default function Design() {
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -17,7 +18,7 @@ export default function Design() {
       <div className="page-hero">
         <img src="/images/Hero/herobanner.jpg" alt="hero" className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-slate-900/75" />
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48 relative z-10 h-full flex flex-col justify-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48 relative z-10 h-full flex flex-col justify-center">
           <button
             onClick={() => navigate(-1)}
             className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors mb-4"
@@ -25,10 +26,12 @@ export default function Design() {
             <ArrowLeft className="w-5 h-5" />
             Back
           </button>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Our Design Work
           </h1>
-          <p className="text-slate-300 text-lg">`n            <span className="typewriter">Explore our portfolio of creative design projects</span>`n          </p>
+          <p className="text-slate-300 text-lg">
+            <span className="typewriter">Explore our portfolio of creative design projects</span>
+            </p>
         </div>
       </div>
 
@@ -39,7 +42,7 @@ export default function Design() {
           <div className="flex flex-wrap gap-3 justify-center">
             <button
               onClick={() => setSelectedCategory('all')}
-              className={`px-6 py-2 rounded-full font-semibold transition-all ${
+              className={`px-4 sm:px-6 py-2 min-h-[40px] rounded-full font-semibold transition-all ${
                 selectedCategory === 'all'
                   ? 'bg-[var(--brand-blue)] text-white'
                   : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
@@ -51,7 +54,7 @@ export default function Design() {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-2 rounded-full font-semibold transition-all ${
+                className={`px-4 sm:px-6 py-2 min-h-[40px] rounded-full font-semibold transition-all ${
                   selectedCategory === category.id
                     ? 'bg-[var(--brand-blue)] text-white'
                     : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
@@ -163,12 +166,12 @@ export default function Design() {
               </div>
 
               {/* Close Button */}
-              <button
+              <Button
                 onClick={() => setSelectedProject(null)}
-                className="w-full mt-6 bg-[var(--brand-blue)] hover:opacity-90 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                className="w-full mt-6 bg-[var(--brand-blue)] hover:opacity-90 text-white font-bold py-3 px-6 rounded-lg"
               >
                 Close
-              </button>
+              </Button>
             </div>
           </div>
         </div>

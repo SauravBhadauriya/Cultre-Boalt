@@ -2,7 +2,7 @@ export const careerData = {
   overview: {
     title: "Join Our Team",
     subtitle: "Build Your Career at Cultre Boat",
-    description: "We're looking for talented, creative individuals who are passionate about design, storytelling, and making an impact. Join us and grow your career with a team that values innovation and collaboration."
+    description: "Seeking creative talent to innovate, tell stories, and grow with our team."
   },
 
   benefits: [

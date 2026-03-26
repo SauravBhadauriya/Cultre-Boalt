@@ -187,7 +187,13 @@
 /* Page hero banner - consistent across all inner pages */
 .page-hero {
   @apply relative text-white overflow-hidden;
-  height: 420px;
+  height: 280px;
+}
+@media (min-width: 640px) {
+  .page-hero { height: 340px; }
+}
+@media (min-width: 768px) {
+  .page-hero { height: 420px; }
 }
 
 .page-hero img {
@@ -249,6 +255,7 @@
   overflow: hidden;
   white-space: nowrap;
   width: 0;
+  max-width: 100%;
   animation: typing 3s steps(52, end) 1s forwards;
 }
 .typewriter::after {

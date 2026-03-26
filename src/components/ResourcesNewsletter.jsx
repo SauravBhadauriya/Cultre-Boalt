@@ -65,7 +65,7 @@ export default function ResourcesNewsletter() {
               </div>
 
               {/* Resources List - Scrollable Container */}
-              <div className="space-y-4 h-80 overflow-y-scroll pr-3 border border-slate-200 rounded-lg p-4 bg-white" onScroll={handleScroll}>
+              <div className="space-y-4 h-48 sm:h-64 md:h-80 overflow-y-scroll pr-3 border border-slate-200 rounded-lg p-4 bg-white" onScroll={handleScroll}>
                 {displayedResources.map((resource) => (
                   <Card
                     key={resource.id}

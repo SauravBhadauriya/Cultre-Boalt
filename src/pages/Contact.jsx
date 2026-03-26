@@ -76,7 +76,7 @@ export default function Contact() {
       <div className="page-hero">
         <img src="/images/Hero/herobanner.jpg" alt="hero" className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-slate-900/75" />
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48 relative z-10 h-full flex flex-col justify-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48 relative z-10 h-full flex flex-col justify-center">
           <button
             onClick={() => navigate(-1)}
             className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors mb-4"
@@ -84,10 +84,12 @@ export default function Contact() {
             <ArrowLeft className="w-5 h-5" />
             Back
           </button>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Get In Touch
           </h1>
-          <p className="text-slate-300 text-lg">`n            <span className="typewriter">Let's discuss your project and how we can help your business grow</span>`n          </p>
+          <p className="text-slate-300 text-lg">
+            <span className="typewriter">Let's discuss your project and how we can help your business grow</span>
+            </p>
         </div>
       </div>
 
@@ -97,7 +99,7 @@ export default function Contact() {
           {/* Left Side - Contact Info */}
           <div className="space-y-8">
             {/* Image collage */}
-            <div className="grid grid-cols-2 gap-3 h-56">
+            <div className="grid grid-cols-2 gap-3 h-40 sm:h-56">
               <div className="row-span-2 rounded-2xl overflow-hidden shadow-md">
                 <img src="/images/Blog/Blog1.jpg" alt="" className="w-full h-full object-cover" />
               </div>
@@ -260,15 +262,14 @@ export default function Contact() {
                   )}
                 </div>
               ))}
-
               {/* Submit Button */}
-              <button
+              <Button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-[var(--brand-blue)] hover:opacity-90 disabled:bg-slate-400 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 uppercase tracking-wide"
+                className="w-full bg-[var(--brand-blue)] hover:opacity-90 disabled:bg-slate-400 text-white font-bold py-3 px-6 rounded-lg uppercase tracking-wide"
               >
                 {loading ? 'Submitting...' : 'Submit'}
-              </button>
+              </Button>
             </form>
           </div>
         </div>
@@ -276,7 +277,7 @@ export default function Contact() {
 
       {/* Image Banner + Stats */}
       <div className="relative">
-        <div className="grid grid-cols-3 h-48 md:h-64 overflow-hidden">
+        <div className="grid grid-cols-3 h-36 sm:h-48 md:h-64 overflow-hidden">
           <img src="/images/Blog/Blog2.jpg" alt="" className="w-full h-full object-cover" />
           <img src="/images/Blog/Blog4.jpg" alt="" className="w-full h-full object-cover" />
           <img src="/images/Blog/Blog6.jpg" alt="" className="w-full h-full object-cover" />

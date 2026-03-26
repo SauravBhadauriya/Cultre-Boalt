@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { socialData } from '@/data/socialData'
 import { ArrowLeft, CheckCircle } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 const campaignImages = [
   "/images/Blog/Blog3.jpg",
@@ -20,7 +21,7 @@ export default function Social() {
       <div className="page-hero">
         <img src="/images/Hero/herobanner.jpg" alt="hero" className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-slate-900/75" />
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48 relative z-10 h-full flex flex-col justify-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48 relative z-10 h-full flex flex-col justify-center">
           <button
             onClick={() => navigate(-1)}
             className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors mb-8"
@@ -28,17 +29,19 @@ export default function Social() {
             <ArrowLeft className="w-5 h-5" />
             Back
           </button>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
             {socialData.overview.title}
           </h1>
-          <p className="text-slate-300 text-base md:text-lg max-w-2xl">`n           <span className="typewriter">{socialData.overview.description}</span>`n          </p>
+          <p className="text-slate-300 text-base md:text-lg max-w-2xl">
+            <span className="typewriter">{socialData.overview.description}</span>
+            </p>
         </div>
       </div>
 
       {/* Services Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-900 mb-8 md:mb-12">
             Our Services
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -58,8 +61,8 @@ export default function Social() {
 
       {/* Statistics Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-900 mb-8 md:mb-12">
             Our Impact
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -80,8 +83,8 @@ export default function Social() {
 
       {/* Platforms Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-900 mb-8 md:mb-12">
             Platforms We Manage
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -102,13 +105,13 @@ export default function Social() {
 
       {/* Image Showcase Section */}
       <section className="section-base bg-white">
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48">
           <div className="text-center mb-12">
             <p className="section-label">Our Work</p>
             <h2 className="section-heading">Social Media in Action</h2>
             <p className="text-slate-600 mt-3 max-w-xl mx-auto">A glimpse of the creative content and campaigns we've delivered for our clients.</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 md:gap-3">
             {[
               { src: "/images/Blog/Blog1.jpg", label: "Fashion Campaign" },
               { src: "/images/Blog/Blog2.jpg", label: "Bridal Content" },
@@ -136,8 +139,8 @@ export default function Social() {
 
       {/* Campaigns Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-900 mb-8 md:mb-12">
             Featured Campaigns
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -205,20 +208,20 @@ export default function Social() {
                 <p className="text-3xl font-bold text-[var(--brand-blue)]">{selectedCampaign.engagement}</p>
               </div>
             </div>
-            <button
+            <Button
               onClick={() => setSelectedCampaign(null)}
-              className="w-full bg-[var(--brand-blue)] hover:opacity-90 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+              className="w-full bg-[var(--brand-blue)] hover:opacity-90 text-white font-bold py-3 px-6 rounded-lg"
             >
               Close
-            </button>
+            </Button>
           </div>
         </div>
       )}
 
       {/* Testimonials Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-900 mb-8 md:mb-12">
             What Our Clients Say
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -249,8 +252,8 @@ export default function Social() {
 
       {/* Why Choose Us Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-900 mb-8 md:mb-12">
             Why Choose Us for Social Media
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -343,7 +346,7 @@ export default function Social() {
 
       {/* CTA Section */}
       <section className="relative overflow-hidden">
-        <div className="grid grid-cols-3 h-48 md:h-64">
+        <div className="grid grid-cols-3 h-36 sm:h-48 md:h-64">
           <img src="/images/Blog/Blog3.jpg" alt="" className="w-full h-full object-cover" />
           <img src="/images/Blog/Blog5.jpg" alt="" className="w-full h-full object-cover" />
           <img src="/images/Blog/Blog7.jpg" alt="" className="w-full h-full object-cover" />
@@ -352,9 +355,9 @@ export default function Social() {
           <div className="text-center text-white px-4">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Grow Your Social Media?</h2>
             <p className="text-teal-100 text-lg mb-8">Let's create a social media strategy that drives real results for your brand.</p>
-            <button onClick={() => navigate('/contact')} className="bg-white text-[var(--brand-blue)] hover:bg-blue-50 font-bold py-3 px-8 rounded-full transition-colors cursor-pointer">
+            <Button onClick={() => navigate('/contact')} className="bg-white text-[var(--brand-blue)] hover:bg-blue-50 font-bold py-3 px-8 rounded-full cursor-pointer">
               Get Started
-            </button>
+            </Button>
           </div>
         </div>
       </section>

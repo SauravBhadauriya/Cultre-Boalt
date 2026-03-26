@@ -68,9 +68,9 @@ export default function HeroBanner() {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/40 flex items-center px-10 md:px-20 lg:px-48">
+              <div className="absolute inset-0 bg-black/40 flex items-center px-4 sm:px-10 md:px-20 lg:px-48">
                 <div className="text-white max-w-2xl">
-                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                     We build stories that connect
                   </h1>
 

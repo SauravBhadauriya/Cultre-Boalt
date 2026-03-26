@@ -2,7 +2,7 @@ export const prData = {
   overview: {
     title: "PR",
     subtitle: "Editorial | Lifestyle | Influencers",
-    description: "Strategic public relations and communications that build your brand's reputation, manage your narrative, and create meaningful connections with your stakeholders."
+    description: "We manage PR and communications to build your brand and connect with stakeholders."
   },
   
   services: [

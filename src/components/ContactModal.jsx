@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { X } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 import { contactData } from '@/data/contactData'
 
 export default function ContactModal({ isOpen, onClose }) {
@@ -75,7 +76,7 @@ export default function ContactModal({ isOpen, onClose }) {
       />
 
       {/* Modal */}
-      <div className="relative bg-white rounded-lg shadow-xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+      <div className="relative bg-white rounded-lg shadow-xl max-w-2xl w-full mx-2 sm:mx-4 max-h-[90vh] overflow-y-auto">
         {/* Header */}
         <div className="sticky top-0 bg-[var(--brand-blue)] text-white p-6 flex justify-between items-center">
           <div>
@@ -147,13 +148,13 @@ export default function ContactModal({ isOpen, onClose }) {
             ))}
 
             {/* Submit Button */}
-            <button
+            <Button
               type="submit"
               disabled={loading}
-              className="w-full bg-[var(--brand-blue)] hover:opacity-90 disabled:bg-slate-400 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 uppercase tracking-wide mt-6"
+              className="w-full bg-[var(--brand-blue)] hover:opacity-90 disabled:bg-slate-400 text-white font-bold py-3 px-6 rounded-lg uppercase tracking-wide mt-6"
             >
               {loading ? 'Submitting...' : 'Submit'}
-            </button>
+            </Button>
           </form>
         </div>
       </div>

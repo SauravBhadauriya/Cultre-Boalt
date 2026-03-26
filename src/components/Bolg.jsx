@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import SectionHeader from '@/components/ui/SectionHeader'
+import { Button } from '@/components/ui/button'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import Autoplay from 'embla-carousel-autoplay'
 import { newsEventsData } from '@/data/Blog'
@@ -64,7 +65,7 @@ export default function Bolg() {
               <CarouselContent>
                 {newsEventsData.newsItems.map((item) => (
                   <CarouselItem key={item.id}>
-                    <div className="h-[420px] rounded-xl overflow-hidden">
+                    <div className="h-[260px] sm:h-[340px] lg:h-[420px] rounded-xl overflow-hidden">
                       <img
                         src={item.image}
                         alt={item.title}
@@ -82,7 +83,7 @@ export default function Bolg() {
           </div>
 
           {/* Right — News List */}
-          <div ref={listRef} className="flex flex-col gap-3 h-[420px] overflow-y-auto pr-1 scrollbar-hide">
+          <div ref={listRef} className="flex flex-col gap-3 h-[260px] sm:h-[340px] lg:h-[420px] overflow-y-auto pr-1 scrollbar-hide">
             {newsEventsData.newsItems.map((item, index) => {
               const isActive = activeIndex === index
               const isExpanded = expandedId === item.id
@@ -126,12 +127,13 @@ export default function Bolg() {
                   )}
 
                   {/* Read more / less button */}
-                  <button
+                  <Button
+                    variant="ghost"
                     onClick={(e) => handleReadMore(e, item.id)}
-                    className="text-teal-300 text-xs font-medium hover:text-white transition-colors mt-2 inline-block"
+                    className="text-teal-300 text-xs font-medium hover:text-white hover:bg-transparent transition-colors mt-2 p-0 h-auto"
                   >
                     {isExpanded ? 'Show less ↑' : item.link}
-                  </button>
+                  </Button>
                 </div>
               )
             })}

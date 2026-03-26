@@ -2,7 +2,7 @@ export const socialData = {
   overview: {
     title: "Social Media Strategy",
     subtitle: "Build Your Brand Presence Online",
-    description: "We create compelling social media strategies that engage your audience, build community, and drive business growth across all major platforms."
+    description: "We create social media strategies that grow your audience and business."
   },
 
   services: [

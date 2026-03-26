@@ -2,6 +2,7 @@ import React from 'react'
 import { aboutData } from '@/data/aboutData'
 import { useNavigate } from 'react-router-dom'
 import { ArrowLeft, CheckCircle } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 export default function About() {
   const navigate = useNavigate()
@@ -11,7 +12,7 @@ export default function About() {
       <div className="page-hero">
         <img src="/images/Hero/herobanner.jpg" alt="hero" className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-slate-900/75" />
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48 relative z-10 h-full flex flex-col justify-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48 relative z-10 h-full flex flex-col justify-center">
           <button
             onClick={() => navigate(-1)}
             className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors mb-8"
@@ -19,16 +20,18 @@ export default function About() {
             <ArrowLeft className="w-5 h-5" />
             Back
           </button>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
             About Cultre Boat
           </h1>
-          <p className="text-slate-300 text-base md:text-lg max-w-2xl">`n            <span className="typewriter">Let's discuss your project and how we can help your business grow</span>`n          </p>
+          <p className="text-slate-300 text-base md:text-lg max-w-2xl">
+            <span className="typewriter">Let's discuss your project and how we can help your business grow</span>
+            </p>
         </div>
       </div>
 
       {/* Company Overview Section */}
       <section className="section-base px-4">
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Info */}
             <div>
@@ -66,7 +69,7 @@ export default function About() {
             </div>
 
             {/* Right Side - Image */}
-            <div className="h-96 rounded-xl overflow-hidden shadow-lg">
+            <div className="h-64 sm:h-80 rounded-xl overflow-hidden shadow-lg">
               <img
                 src="/images/Blog/Blog2.jpg"
                 alt="Company"
@@ -79,7 +82,7 @@ export default function About() {
 
       {/* Mission & Vision Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Mission */}
             <div className="bg-white p-8 rounded-lg border border-slate-200">
@@ -106,8 +109,8 @@ export default function About() {
 
       {/* Values Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-900 mb-8 md:mb-12">
             Our Core Values
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -127,8 +130,8 @@ export default function About() {
 
       {/* Gallery Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-900 mb-8 md:mb-12">
             Our Creative World
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -136,7 +139,7 @@ export default function About() {
               { src: "/images/Blog/Blog1.jpg", span: "row-span-2" },
               { src: "/images/Blog/Blog3.jpg", span: "" },
               { src: "/images/Blog/Blog4.jpg", span: "" },
-              { src: "/images/Blog/Blog5.jpg", span: "col-span-2" },
+              { src: "/images/Blog/Blog5.jpg", span: "md:col-span-2" },
               { src: "/images/Blog/Blog6.jpg", span: "" },
               { src: "/images/Blog/Blog7.jpg", span: "" },
             ].map((img, i) => (
@@ -154,8 +157,8 @@ export default function About() {
 
       {/* Achievements Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-900 mb-8 md:mb-12">
             Our Achievements
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -176,8 +179,8 @@ export default function About() {
 
       {/* Our Process Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-900 mb-8 md:mb-12">
             Our Process
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -202,8 +205,8 @@ export default function About() {
 
       {/* Team Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-900 mb-8 md:mb-12">
             Meet Our Team
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -232,8 +235,8 @@ export default function About() {
 
       {/* Testimonials Section */}
       <section className="py-12 md:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-900 mb-8 md:mb-12">
             What Our Clients Say
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -264,8 +267,8 @@ export default function About() {
 
       {/* Why Choose Us Section (Similar to WhyChooseUs component) */}
       <section className="py-12 md:py-16 lg:py-20 px-4 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-10 md:px-20 lg:px-48">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-48">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-900 mb-8 md:mb-12">
             Why Choose Cultre Boat
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -358,7 +361,7 @@ export default function About() {
 
       {/* CTA Section */}
       <section className="relative overflow-hidden">
-        <div className="grid grid-cols-3 h-48 md:h-64">
+        <div className="grid grid-cols-3 h-36 sm:h-48 md:h-64">
           <img src="/images/Blog/Blog1.jpg" alt="" className="w-full h-full object-cover" />
           <img src="/images/Blog/Blog3.jpg" alt="" className="w-full h-full object-cover" />
           <img src="/images/Blog/Blog5.jpg" alt="" className="w-full h-full object-cover" />
@@ -367,9 +370,9 @@ export default function About() {
           <div className="text-center text-white px-4">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Work With Us?</h2>
             <p className="text-teal-100 text-lg mb-8">Let's create something amazing together. Get in touch with our team today.</p>
-            <button onClick={() => navigate('/contact')} className="bg-white text-[var(--brand-blue)] hover:bg-blue-50 font-bold py-3 px-8 rounded-full transition-colors cursor-pointer">
+            <Button onClick={() => navigate('/contact')} className="bg-white text-[var(--brand-blue)] hover:bg-blue-50 font-bold py-3 px-8 rounded-full cursor-pointer">
               Get Started
-            </button>
+            </Button>
           </div>
         </div>
       </section>
