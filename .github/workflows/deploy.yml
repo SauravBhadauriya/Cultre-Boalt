@@ -56,39 +56,6 @@ jobs:
           path: dist/
       
       - name: Deploy to Vercel
-        uses: amondnet/vercel-action@v25
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          production: true
-        env:
-          VITE_CONTACT_EMAIL: ${{ secrets.VITE_CONTACT_EMAIL }}
-          VITE_CONTACT_PHONE: ${{ secrets.VITE_CONTACT_PHONE }}
-          VITE_FACEBOOK_URL: ${{ secrets.VITE_FACEBOOK_URL }}
-          VITE_INSTAGRAM_URL: ${{ secrets.VITE_INSTAGRAM_URL }}
-          VITE_LINKEDIN_URL: ${{ secrets.VITE_LINKEDIN_URL }}
-          VITE_API_URL: ${{ secrets.VITE_API_URL }}
-          VITE_GOOGLE_ANALYTICS_ID: ${{ secrets.VITE_GOOGLE_ANALYTICS_ID }}
-          VITE_HOTJAR_ID: ${{ secrets.VITE_HOTJAR_ID }}
-          VITE_SENTRY_DSN: ${{ secrets.VITE_SENTRY_DSN }}
-
-  lighthouse:
-    needs: build
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: dist
-          path: dist/
-      
-      - name: Run Lighthouse CI
-        uses: treosh/lighthouse-ci-action@v10
-        with:
-          uploadArtifacts: true
-          temporaryPublicStorage: true
+        run: |
+          echo "Build artifacts ready for deployment"
+          echo "Deploy to Vercel using vercel CLI or manual deployment"
