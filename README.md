@@ -3,7 +3,7 @@
 A modern, responsive web application for a creative branding and digital agency. Built with React, Vite, and Tailwind CSS.
 
 
-![website](https://cultre-boalt-7x7w.vercel.app/)
+![websites](https://cultre-boalt-7x7w.vercel.app/)
 
 
 ## 🎯 Project Overview
