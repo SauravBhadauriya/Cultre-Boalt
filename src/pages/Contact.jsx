@@ -11,6 +11,7 @@ const iconMap = {
 }
 
 export default function Contact() {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     email: '',
     name: '',

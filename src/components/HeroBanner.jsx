@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/carousel"
 
 export default function HeroBanner() {
-  // eslint-disable-next-line no-unused-vars
   const navigate = useNavigate()
   const images = [
     "/images/Hero/hero1.jpg",
