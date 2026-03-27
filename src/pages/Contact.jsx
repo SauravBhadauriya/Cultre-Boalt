@@ -11,6 +11,7 @@ const iconMap = {
 }
 
 export default function Contact() {
+  // Initialize navigation hook
   const navigate = useNavigate()
   const [formData, setFormData] = useState({
     email: '',
