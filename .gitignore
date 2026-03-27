@@ -4,7 +4,6 @@ node_modules/
 .pnp.js
 
 # Lock files (keep one, ignore others)
-package-lock.json
 yarn.lock
 pnpm-lock.yaml
 
@@ -15,10 +14,9 @@ pnpm-lock.yaml
 .env.development.local
 .env.test.local
 .env.production.local
-.env.production
 
 # Build output
-dist-sr/
+dist/
 build/
 out/
 
@@ -41,7 +39,6 @@ coverage/
 .nyc_output/
 
 # IDE & Editor
-.vscode/
 .idea/
 *.suo
 *.ntvs*
@@ -69,44 +66,3 @@ Desktop.ini
 *.temp
 *.bak
 *.backup
-
-# Deployment scripts
-deploy.bat
-deploy.sh
-
-# Documentation (not needed for deployment)
-INTERVIEW_QUESTIONS_AND_ANSWERS.md
-PROJECT_FLOWCHART_AND_ARCHITECTURE.md
-PROJECT_DETAILED_EXPLANATION.md
-INTERVIEW_AND_DOCUMENTATION_SUMMARY.md
-COMPLETE_DOCUMENTATION_INDEX.md
-DEPLOYMENT_GUIDE.md
-DEPLOYMENT.md
-PRODUCTION_CHECKLIST.md
-PRODUCTION_DEPLOYMENT_SUMMARY.md
-PRODUCTION_READY_FINAL_SUMMARY.md
-PRODUCTION_README.md
-PRODUCTION_READY.md
-PRODUCTION_SUMMARY.md
-DEVELOPMENT.md
-DOCUMENTATION_INDEX.md
-CONTACT_FEATURE_COMPLETE.md
-CONTACT_FEATURE_GUIDE.md
-CONTACT_IMPLEMENTATION_SUMMARY.md
-CONTACT_SETUP.md
-DESIGN_PAGE_COMPLETE.md
-DESIGN_PAGE_GUIDE.md
-COMPLETION_SUMMARY.md
-ASSIGNMENT_COMPLETE_SUMMARY.txt
-ASSIGNMENT_RESPONSE.md
-ASSIGNMENT_SUBMISSION_GUIDE.md
-FINAL_DEPLOYMENT_SUMMARY.md
-
-
-
-
-dist/
-GITIGNORE_DEPLOYMENT_GUIDE.md
-PRODUCTION_DEPLOYMENT_INDEX.md
-PROJECT_SUMMARY.md
-PR_PAGE_COMPLETE.md
