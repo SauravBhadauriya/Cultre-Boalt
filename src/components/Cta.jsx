@@ -19,7 +19,7 @@ export default function CTASection() {
         </div>
         {/* Teal overlay + content */}
         <div className="absolute inset-0 bg-[var(--brand-teal)]/80 flex items-center justify-center p-3 sm:p-4">
-          <div className="text-center text-white max-w-xl">
+          <div className="text-center text-white max-w-xl flex flex-col items-center">
             <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4 tracking-tight leading-snug">
               Ready to Transform Your Brand?
             </h2>

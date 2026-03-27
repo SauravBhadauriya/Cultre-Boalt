@@ -352,12 +352,14 @@ export default function Social() {
           <img src="/images/Blog/Blog7.jpg" alt="" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-[var(--brand-teal)]/80 flex items-center justify-center p-4">
-          <div className="text-center text-white max-w-2xl">
+          <div className="text-center text-white max-w-2xl flex flex-col items-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Ready to Grow Your Social Media?</h2>
             <p className="text-teal-100 text-sm sm:text-base md:text-lg mb-6 sm:mb-8">Let's create a social media strategy that drives real results for your brand.</p>
-            <Button onClick={() => navigate('/contact')} className="bg-white text-[var(--brand-blue)] hover:bg-blue-50 font-bold py-3 sm:py-3 px-4 sm:px-8 rounded-full cursor-pointer text-sm sm:text-base w-full sm:w-auto min-h-[44px] flex items-center justify-center">
-              Get Started
-            </Button>
+            <div className="flex justify-center w-full">
+              <Button onClick={() => navigate('/contact')} className="bg-white text-[var(--brand-blue)] hover:bg-blue-50 font-bold py-3 sm:py-3 px-4 sm:px-8 rounded-full cursor-pointer text-sm sm:text-base w-auto min-h-[44px] flex items-center justify-center">
+                Get Started
+              </Button>
+            </div>
           </div>
         </div>
       </section>
