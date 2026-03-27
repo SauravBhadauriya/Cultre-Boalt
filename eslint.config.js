@@ -23,7 +23,10 @@ export default defineConfig([
       },
     },
     rules: {
-      'no-unused-vars': ['warn', { varsIgnorePattern: '^[A-Z_]|navigate' }],
+      'no-unused-vars': ['warn', { 
+        varsIgnorePattern: '^_|^[A-Z]|navigate|useNavigate',
+        argsIgnorePattern: '^_'
+      }],
       'react-hooks/rules-of-hooks': 'error',
       'react-refresh/only-export-components': 'warn',
     },

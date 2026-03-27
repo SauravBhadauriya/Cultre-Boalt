@@ -5,6 +5,7 @@ import { X, ArrowLeft } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export default function Design() {
+  // eslint-disable-next-line no-unused-vars
   const navigate = useNavigate()
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [selectedProject, setSelectedProject] = useState(null)
